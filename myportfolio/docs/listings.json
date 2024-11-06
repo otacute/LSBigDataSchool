@@ -1,0 +1,26 @@
+[
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/hw8/logisitc.html",
+      "/posts/hw7/chi.html",
+      "/posts/hw6/p-values.html",
+      "/posts/hw5/confidence_interval.html",
+      "/posts/hw4/free_of_freedom.html",
+      "/posts/hw3/normal_distribution_example.html",
+      "/posts/hw2/textbook-chap8.html",
+      "/posts/hw1/index.html"
+    ]
+  },
+  {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/hw6/p-values.html",
+      "/posts/hw5/confidence_interval.html",
+      "/posts/hw4/free_of_freedom.html",
+      "/posts/hw3/normal_distribution_example.html",
+      "/posts/hw2/textbook-chap8.html",
+      "/posts/hw1/index.html"
+    ]
+  }
+]

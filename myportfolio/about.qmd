@@ -1,0 +1,57 @@
+---
+title: ""
+jupyter: python3
+---
+
+# Hangyeol Park
+
+**Mobile:** (+82 10) 2658-6918  
+**E-mail:** hg.park.970813@gmail.com
+
+## OBJECTIVE
+I am an experienced engineer with extensive experience in energy solutions, possessing a nuanced understanding of the complexities within the electrical industry gained through learning various automation products in addition to energy solutions.
+
+## Core Competencies
+- Data analysis and visualization
+- MS-SQL
+- Python
+- PLC (Schnieder)
+- SCADA (X-SCADA)
+- HMI (Proface)
+- Power equipment
+- PowerBI, Reportbuilder
+- Modbus
+- Wiring
+
+## PROFESSIONAL EXPERIENCE
+
+### DAS korea (Apr. 2022 – May. 2023)  
+**Engineer**  
+- Built a Data Monitoring System Using PME (Power Monitoring Expert)  
+- Provided installation support and manual writing for power metering devices  
+- Delivered basic electrical education for users  
+- Configured UI using SCADA and data management programs (RDBMS) for data preprocessing and visualization  
+- Generated reports as per customer requirements using Python  
+- Expanded sub-devices and parent devices using Modbus RTU/TCP  
+- Supported wiring operations for panel production including wiring for product and communication lines  
+
+## EDUCATION
+
+**Pukyong National University, Busan, Korea**  
+Bachelor of Science in Electrical Engineering (Mar. 2016 – Feb. 2020)  
+Coursework: Electromagnetics, Circuit Theory, Control Engineering, etc.
+
+## SKILLS & LANGUAGES
+
+- English: Conversational  
+- TOEIC: Scored 790 (Dec. 2021)  
+- TOEIC Speaking: Scored Intermediate Mid 3 (130, Feb. 2022)  
+
+## LICENSES & CERTIFICATIONS
+
+- Engineer Electricity  
+- Engineer Electric Work  
+- SQL Developer (SQLD)  
+- Advanced Data Analytics Semi-Professional (ADsP)  
+- Computer Specialist in Spreadsheet & Database (Level 1)  
+- Class 2 Driver’s License

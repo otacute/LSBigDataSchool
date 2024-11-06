@@ -1,0 +1,17 @@
+/* css styles */
+/* 예시 CSS 코드 */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+  background-color: #333;
+}
+
+.navbar a {
+  color: #F2EA79; /* 네비게이션 바의 텍스트 색상 */
+}
+
+h1 {
+  color: #F2EA79; /* 제목 색상 */
+}

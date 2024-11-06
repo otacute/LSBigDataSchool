@@ -1,0 +1,11 @@
+---
+title: "myblog"
+listing: 
+    contents: posts
+    sort: "date desc"
+    type: grid
+    categories: true
+format:
+  html:
+    theme: flatly
+---

@@ -1,0 +1,401 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "**Park Han Gyeol : Portfolio**",
+    "section": "",
+    "text": "안녕하세요! 전력 데이터 분석 및 시각화 분야에 관심이 많은 박한결입니다."
+  },
+  {
+    "objectID": "index.html#홈페이지-첫-화면입니다",
+    "href": "index.html#홈페이지-첫-화면입니다",
+    "title": "박한결 - 포트폴리오",
+    "section": "홈페이지 첫 화면입니다!",
+    "text": "홈페이지 첫 화면입니다!\n안녕하세요, 데이터 분석 한결입니다."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Hangyeol Park",
+    "section": "",
+    "text": "Mobile: (+82 10) 2658-6918\nE-mail: hg.park.970813@gmail.com\n\n\nI am an experienced engineer with extensive experience in energy solutions, possessing a nuanced understanding of the complexities within the electrical industry gained through learning various automation products in addition to energy solutions.\n\n\n\n\nData analysis and visualization\nMS-SQL\nPython\nPLC (Schnieder)\nSCADA (X-SCADA)\nHMI (Proface)\nPower equipment\nPowerBI, Reportbuilder\nModbus\nWiring\n\n\n\n\n\n\nEngineer\n- Built a Data Monitoring System Using PME (Power Monitoring Expert)\n- Provided installation support and manual writing for power metering devices\n- Delivered basic electrical education for users\n- Configured UI using SCADA and data management programs (RDBMS) for data preprocessing and visualization\n- Generated reports as per customer requirements using Python\n- Expanded sub-devices and parent devices using Modbus RTU/TCP\n- Supported wiring operations for panel production including wiring for product and communication lines\n\n\n\n\nPukyong National University, Busan, Korea\nBachelor of Science in Electrical Engineering (Mar. 2016 – Feb. 2020)\nCoursework: Electromagnetics, Circuit Theory, Control Engineering, etc.\n\n\n\n\nEnglish: Conversational\n\nTOEIC: Scored 790 (Dec. 2021)\n\nTOEIC Speaking: Scored Intermediate Mid 3 (130, Feb. 2022)\n\n\n\n\n\nEngineer Electricity\n\nEngineer Electric Work\n\nSQL Developer (SQLD)\n\nAdvanced Data Analytics Semi-Professional (ADsP)\n\nComputer Specialist in Spreadsheet & Database (Level 1)\n\nClass 2 Driver’s License"
+  },
+  {
+    "objectID": "hw1.html",
+    "href": "hw1.html",
+    "title": "HomeWork(20240715)",
+    "section": "",
+    "text": "1. p84 혼자서 해보기\n\n1 + 1\n\n2"
+  },
+  {
+    "objectID": "hw1.html#p84-혼자서-해보기",
+    "href": "hw1.html#p84-혼자서-해보기",
+    "title": "HomeWork(20240715)",
+    "section": "",
+    "text": "1 + 1\n\n2"
+  },
+  {
+    "objectID": "posts/hw1/index.html",
+    "href": "posts/hw1/index.html",
+    "title": "Homework1",
+    "section": "",
+    "text": "1. p84 혼자서 해보기\nQ1. 다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요.\n\nimport pandas as pd\ndf = pd.DataFrame({'제품' : ['사과','딸기','수박'],\n      '가격' : [1800, 1500, 3000],\n      '판매량' : [24,38,13]})\ndf\n\n\n\n\n\n\n\n\n제품\n가격\n판매량\n\n\n\n\n0\n사과\n1800\n24\n\n\n1\n딸기\n1500\n38\n\n\n2\n수박\n3000\n13\n\n\n\n\n\n\n\nQ2. 앞에서 만든 데이터 프레임을 이용해 과일의 가격 평균과 판매량 평균을 구해 보세요.\n\ndf['가격'].mean()\ndf['판매량'].mean()\n\nnp.float64(25.0)\n\n\n\n\n2. 115p 혼자서해보기\nmpg 데이터를 이용해 분석 문제를 해결해 보세요. mpg 데이터의 변수명은 긴 단어를 짧게 줄인 축약어로 되어 있습니다. city는 도시 연비, hwy는 고속도로 연비를 의미합니다. 변수명을 이해하기 쉬운 단어로 바꾸려고 합니다.\nQ1. mpg 데이터를 불러와 복사본을 만드세요.\n\nmpg = pd.read_csv('data/mpg.csv')\nmpg_copy = mpg.copy()\nmpg_copy\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n229\nvolkswagen\npassat\n2.0\n2008\n4\nauto(s6)\nf\n19\n28\np\nmidsize\n\n\n230\nvolkswagen\npassat\n2.0\n2008\n4\nmanual(m6)\nf\n21\n29\np\nmidsize\n\n\n231\nvolkswagen\npassat\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\nmidsize\n\n\n232\nvolkswagen\npassat\n2.8\n1999\n6\nmanual(m5)\nf\n18\n26\np\nmidsize\n\n\n233\nvolkswagen\npassat\n3.6\n2008\n6\nauto(s6)\nf\n17\n26\np\nmidsize\n\n\n\n\n234 rows × 11 columns\n\n\n\nQ2. 복사본 데이터를 이용해 cty는 city로, hwy는 highway로 수정합니다.\n\nmpg_copy = mpg_copy.rename(columns = {'cty':'city', 'hwy':'highway'})\n\nQ3. 데이터 일부를 출력해 변수명이 바뀌었는지 확인해보세요. 다음과 같은 결과물이 출력되어야 합니다.\n\nmpg_copy\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncity\nhighway\nfl\ncategory\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n229\nvolkswagen\npassat\n2.0\n2008\n4\nauto(s6)\nf\n19\n28\np\nmidsize\n\n\n230\nvolkswagen\npassat\n2.0\n2008\n4\nmanual(m6)\nf\n21\n29\np\nmidsize\n\n\n231\nvolkswagen\npassat\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\nmidsize\n\n\n232\nvolkswagen\npassat\n2.8\n1999\n6\nmanual(m5)\nf\n18\n26\np\nmidsize\n\n\n233\nvolkswagen\npassat\n3.6\n2008\n6\nauto(s6)\nf\n17\n26\np\nmidsize\n\n\n\n\n234 rows × 11 columns\n\n\n\n\n\n3.p130 분석도전\nmidwest.csv는 미국 동북중부 437개 지역의 인구 통계 정보를 담고 있습니다. midwest.csv를 이용해 데이터 분석 문제를 해결해 보세요\nQ1. midwest.csv를 불러와 데이터의 특징을 파악하세요\n\nimport pandas as pd\ndf2 = pd.read_csv('data/midwest.csv')\ndf2\n\n\n\n\n\n\n\n\nPID\ncounty\nstate\narea\npoptotal\npopdensity\npopwhite\npopblack\npopamerindian\npopasian\n...\npercollege\npercprof\npoppovertyknown\npercpovertyknown\npercbelowpoverty\npercchildbelowpovert\npercadultpoverty\npercelderlypoverty\ninmetro\ncategory\n\n\n\n\n0\n561\nADAMS\nIL\n0.052\n66090\n1270.961540\n63917\n1702\n98\n249\n...\n19.631392\n4.355859\n63628\n96.274777\n13.151443\n18.011717\n11.009776\n12.443812\n0\nAAR\n\n\n1\n562\nALEXANDER\nIL\n0.014\n10626\n759.000000\n7054\n3496\n19\n48\n...\n11.243308\n2.870315\n10529\n99.087145\n32.244278\n45.826514\n27.385647\n25.228976\n0\nLHR\n\n\n2\n563\nBOND\nIL\n0.022\n14991\n681.409091\n14477\n429\n35\n16\n...\n17.033819\n4.488572\n14235\n94.956974\n12.068844\n14.036061\n10.852090\n12.697410\n0\nAAR\n\n\n3\n564\nBOONE\nIL\n0.017\n30806\n1812.117650\n29344\n127\n46\n150\n...\n17.278954\n4.197800\n30337\n98.477569\n7.209019\n11.179536\n5.536013\n6.217047\n1\nALU\n\n\n4\n565\nBROWN\nIL\n0.018\n5836\n324.222222\n5264\n547\n14\n5\n...\n14.475999\n3.367680\n4815\n82.505140\n13.520249\n13.022889\n11.143211\n19.200000\n0\nAAR\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n432\n3048\nWAUKESHA\nWI\n0.034\n304715\n8962.205880\n298313\n1096\n672\n2699\n...\n35.396784\n7.667090\n299802\n98.387674\n3.121060\n3.785820\n2.590061\n4.085479\n1\nHLU\n\n\n433\n3049\nWAUPACA\nWI\n0.045\n46104\n1024.533330\n45695\n22\n125\n92\n...\n16.549869\n3.138596\n44412\n96.330036\n8.488697\n10.071411\n6.953799\n10.338641\n0\nAAR\n\n\n434\n3050\nWAUSHARA\nWI\n0.037\n19385\n523.918919\n19094\n29\n70\n43\n...\n15.064584\n2.620907\n19163\n98.854785\n13.786985\n20.050708\n11.695784\n11.804558\n0\nAAR\n\n\n435\n3051\nWINNEBAGO\nWI\n0.035\n140320\n4009.142860\n136822\n697\n685\n1728\n...\n24.995504\n5.659847\n133950\n95.460376\n8.804031\n10.592031\n8.660587\n6.661094\n1\nHAU\n\n\n436\n3052\nWOOD\nWI\n0.048\n73605\n1533.437500\n72157\n90\n481\n722\n...\n21.666382\n4.583725\n72685\n98.750085\n8.525831\n11.162997\n7.375656\n7.882918\n0\nAAR\n\n\n\n\n437 rows × 28 columns\n\n\n\n\ndf2.head()\n\n\n\n\n\n\n\n\nPID\ncounty\nstate\narea\npoptotal\npopdensity\npopwhite\npopblack\npopamerindian\npopasian\n...\npercollege\npercprof\npoppovertyknown\npercpovertyknown\npercbelowpoverty\npercchildbelowpovert\npercadultpoverty\npercelderlypoverty\ninmetro\ncategory\n\n\n\n\n0\n561\nADAMS\nIL\n0.052\n66090\n1270.961540\n63917\n1702\n98\n249\n...\n19.631392\n4.355859\n63628\n96.274777\n13.151443\n18.011717\n11.009776\n12.443812\n0\nAAR\n\n\n1\n562\nALEXANDER\nIL\n0.014\n10626\n759.000000\n7054\n3496\n19\n48\n...\n11.243308\n2.870315\n10529\n99.087145\n32.244278\n45.826514\n27.385647\n25.228976\n0\nLHR\n\n\n2\n563\nBOND\nIL\n0.022\n14991\n681.409091\n14477\n429\n35\n16\n...\n17.033819\n4.488572\n14235\n94.956974\n12.068844\n14.036061\n10.852090\n12.697410\n0\nAAR\n\n\n3\n564\nBOONE\nIL\n0.017\n30806\n1812.117650\n29344\n127\n46\n150\n...\n17.278954\n4.197800\n30337\n98.477569\n7.209019\n11.179536\n5.536013\n6.217047\n1\nALU\n\n\n4\n565\nBROWN\nIL\n0.018\n5836\n324.222222\n5264\n547\n14\n5\n...\n14.475999\n3.367680\n4815\n82.505140\n13.520249\n13.022889\n11.143211\n19.200000\n0\nAAR\n\n\n\n\n5 rows × 28 columns\n\n\n\n\ndf2.tail()\n\n\n\n\n\n\n\n\nPID\ncounty\nstate\narea\npoptotal\npopdensity\npopwhite\npopblack\npopamerindian\npopasian\n...\npercollege\npercprof\npoppovertyknown\npercpovertyknown\npercbelowpoverty\npercchildbelowpovert\npercadultpoverty\npercelderlypoverty\ninmetro\ncategory\n\n\n\n\n432\n3048\nWAUKESHA\nWI\n0.034\n304715\n8962.205880\n298313\n1096\n672\n2699\n...\n35.396784\n7.667090\n299802\n98.387674\n3.121060\n3.785820\n2.590061\n4.085479\n1\nHLU\n\n\n433\n3049\nWAUPACA\nWI\n0.045\n46104\n1024.533330\n45695\n22\n125\n92\n...\n16.549869\n3.138596\n44412\n96.330036\n8.488697\n10.071411\n6.953799\n10.338641\n0\nAAR\n\n\n434\n3050\nWAUSHARA\nWI\n0.037\n19385\n523.918919\n19094\n29\n70\n43\n...\n15.064584\n2.620907\n19163\n98.854785\n13.786985\n20.050708\n11.695784\n11.804558\n0\nAAR\n\n\n435\n3051\nWINNEBAGO\nWI\n0.035\n140320\n4009.142860\n136822\n697\n685\n1728\n...\n24.995504\n5.659847\n133950\n95.460376\n8.804031\n10.592031\n8.660587\n6.661094\n1\nHAU\n\n\n436\n3052\nWOOD\nWI\n0.048\n73605\n1533.437500\n72157\n90\n481\n722\n...\n21.666382\n4.583725\n72685\n98.750085\n8.525831\n11.162997\n7.375656\n7.882918\n0\nAAR\n\n\n\n\n5 rows × 28 columns\n\n\n\n\ndf2.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 437 entries, 0 to 436\nData columns (total 28 columns):\n #   Column                Non-Null Count  Dtype  \n---  ------                --------------  -----  \n 0   PID                   437 non-null    int64  \n 1   county                437 non-null    object \n 2   state                 437 non-null    object \n 3   area                  437 non-null    float64\n 4   poptotal              437 non-null    int64  \n 5   popdensity            437 non-null    float64\n 6   popwhite              437 non-null    int64  \n 7   popblack              437 non-null    int64  \n 8   popamerindian         437 non-null    int64  \n 9   popasian              437 non-null    int64  \n 10  popother              437 non-null    int64  \n 11  percwhite             437 non-null    float64\n 12  percblack             437 non-null    float64\n 13  percamerindan         437 non-null    float64\n 14  percasian             437 non-null    float64\n 15  percother             437 non-null    float64\n 16  popadults             437 non-null    int64  \n 17  perchsd               437 non-null    float64\n 18  percollege            437 non-null    float64\n 19  percprof              437 non-null    float64\n 20  poppovertyknown       437 non-null    int64  \n 21  percpovertyknown      437 non-null    float64\n 22  percbelowpoverty      437 non-null    float64\n 23  percchildbelowpovert  437 non-null    float64\n 24  percadultpoverty      437 non-null    float64\n 25  percelderlypoverty    437 non-null    float64\n 26  inmetro               437 non-null    int64  \n 27  category              437 non-null    object \ndtypes: float64(15), int64(10), object(3)\nmemory usage: 95.7+ KB\n\n\n\ndf2.describe()\n\n\n\n\n\n\n\n\nPID\narea\npoptotal\npopdensity\npopwhite\npopblack\npopamerindian\npopasian\npopother\npercwhite\n...\nperchsd\npercollege\npercprof\npoppovertyknown\npercpovertyknown\npercbelowpoverty\npercchildbelowpovert\npercadultpoverty\npercelderlypoverty\ninmetro\n\n\n\n\ncount\n437.000000\n437.000000\n4.370000e+02\n437.000000\n4.370000e+02\n4.370000e+02\n437.000000\n437.000000\n437.000000\n437.000000\n...\n437.000000\n437.000000\n437.000000\n4.370000e+02\n437.000000\n437.000000\n437.000000\n437.000000\n437.000000\n437.000000\n\n\nmean\n1437.338673\n0.033169\n9.613030e+04\n3097.742985\n8.183992e+04\n1.102388e+04\n343.109840\n1310.464531\n1612.931350\n95.558441\n...\n73.965546\n18.272736\n4.447259\n9.364228e+04\n97.110267\n12.510505\n16.447464\n10.918798\n11.389043\n0.343249\n\n\nstd\n876.390266\n0.014679\n2.981705e+05\n7664.751786\n2.001966e+05\n7.895827e+04\n868.926751\n9518.394189\n18526.540699\n7.087358\n...\n5.843177\n6.261908\n2.408427\n2.932351e+05\n2.749863\n5.150155\n7.228634\n5.109166\n3.661259\n0.475338\n\n\nmin\n561.000000\n0.005000\n1.701000e+03\n85.050000\n4.160000e+02\n0.000000e+00\n4.000000\n0.000000\n0.000000\n10.694087\n...\n46.912261\n7.336108\n0.520291\n1.696000e+03\n80.902441\n2.180168\n1.918955\n1.938504\n3.547067\n0.000000\n\n\n25%\n670.000000\n0.024000\n1.884000e+04\n622.407407\n1.863000e+04\n2.900000e+01\n44.000000\n35.000000\n20.000000\n94.886032\n...\n71.325329\n14.113725\n2.997957\n1.836400e+04\n96.894572\n9.198715\n11.624088\n7.668009\n8.911763\n0.000000\n\n\n50%\n1221.000000\n0.030000\n3.532400e+04\n1156.208330\n3.447100e+04\n2.010000e+02\n94.000000\n102.000000\n66.000000\n98.032742\n...\n74.246891\n16.797562\n3.814239\n3.378800e+04\n98.169562\n11.822313\n15.270164\n10.007610\n10.869119\n0.000000\n\n\n75%\n2059.000000\n0.038000\n7.565100e+04\n2330.000000\n7.296800e+04\n1.291000e+03\n288.000000\n401.000000\n345.000000\n99.074935\n...\n77.195345\n20.549893\n4.949324\n7.284000e+04\n98.598636\n15.133226\n20.351878\n13.182182\n13.412162\n1.000000\n\n\nmax\n3052.000000\n0.110000\n5.105067e+06\n88018.396600\n3.204947e+06\n1.317147e+06\n10289.000000\n188565.000000\n384119.000000\n99.822821\n...\n88.898674\n48.078510\n20.791321\n5.023523e+06\n99.860384\n48.691099\n64.308477\n43.312464\n31.161972\n1.000000\n\n\n\n\n8 rows × 25 columns\n\n\n\n\ndf2.shape\n\n(437, 28)\n\n\nQ2. poptotal변수를 total로 popasian변수를 asian으로 수정하세요\n\ndf2 = df2.rename(columns={'poptotal':'total', 'popasian':'asian'})\n\n\ndf2.nunique()\n\nPID                     437\ncounty                  320\nstate                     5\narea                     70\ntotal                   435\npopdensity              436\npopwhite                437\npopblack                306\npopamerindian           271\nasian                   274\npopother                256\npercwhite               437\npercblack               437\npercamerindan           437\npercasian               437\npercother               435\npopadults               436\nperchsd                 437\npercollege              437\npercprof                437\npoppovertyknown         436\npercpovertyknown        437\npercbelowpoverty        437\npercchildbelowpovert    437\npercadultpoverty        437\npercelderlypoverty      436\ninmetro                   2\ncategory                 16\ndtype: int64\n\n\nQ3. total, asian 변수를 이용해 전체인구대비 아시아 인구 백분율 파생변수를 추가하고 히스토그램을 만들어 보세요\n\ndf2['percent'] = (df2['asian'] / df2['total']) * 100\ndf2\n\n\n\n\n\n\n\n\nPID\ncounty\nstate\narea\ntotal\npopdensity\npopwhite\npopblack\npopamerindian\nasian\n...\npercprof\npoppovertyknown\npercpovertyknown\npercbelowpoverty\npercchildbelowpovert\npercadultpoverty\npercelderlypoverty\ninmetro\ncategory\npercent\n\n\n\n\n0\n561\nADAMS\nIL\n0.052\n66090\n1270.961540\n63917\n1702\n98\n249\n...\n4.355859\n63628\n96.274777\n13.151443\n18.011717\n11.009776\n12.443812\n0\nAAR\n0.376759\n\n\n1\n562\nALEXANDER\nIL\n0.014\n10626\n759.000000\n7054\n3496\n19\n48\n...\n2.870315\n10529\n99.087145\n32.244278\n45.826514\n27.385647\n25.228976\n0\nLHR\n0.451722\n\n\n2\n563\nBOND\nIL\n0.022\n14991\n681.409091\n14477\n429\n35\n16\n...\n4.488572\n14235\n94.956974\n12.068844\n14.036061\n10.852090\n12.697410\n0\nAAR\n0.106731\n\n\n3\n564\nBOONE\nIL\n0.017\n30806\n1812.117650\n29344\n127\n46\n150\n...\n4.197800\n30337\n98.477569\n7.209019\n11.179536\n5.536013\n6.217047\n1\nALU\n0.486918\n\n\n4\n565\nBROWN\nIL\n0.018\n5836\n324.222222\n5264\n547\n14\n5\n...\n3.367680\n4815\n82.505140\n13.520249\n13.022889\n11.143211\n19.200000\n0\nAAR\n0.085675\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n432\n3048\nWAUKESHA\nWI\n0.034\n304715\n8962.205880\n298313\n1096\n672\n2699\n...\n7.667090\n299802\n98.387674\n3.121060\n3.785820\n2.590061\n4.085479\n1\nHLU\n0.885746\n\n\n433\n3049\nWAUPACA\nWI\n0.045\n46104\n1024.533330\n45695\n22\n125\n92\n...\n3.138596\n44412\n96.330036\n8.488697\n10.071411\n6.953799\n10.338641\n0\nAAR\n0.199549\n\n\n434\n3050\nWAUSHARA\nWI\n0.037\n19385\n523.918919\n19094\n29\n70\n43\n...\n2.620907\n19163\n98.854785\n13.786985\n20.050708\n11.695784\n11.804558\n0\nAAR\n0.221821\n\n\n435\n3051\nWINNEBAGO\nWI\n0.035\n140320\n4009.142860\n136822\n697\n685\n1728\n...\n5.659847\n133950\n95.460376\n8.804031\n10.592031\n8.660587\n6.661094\n1\nHAU\n1.231471\n\n\n436\n3052\nWOOD\nWI\n0.048\n73605\n1533.437500\n72157\n90\n481\n722\n...\n4.583725\n72685\n98.750085\n8.525831\n11.162997\n7.375656\n7.882918\n0\nAAR\n0.980912\n\n\n\n\n437 rows × 29 columns\n\n\n\n\nimport matplotlib.pyplot as plt\ndf2['percent'].plot.hist()\nplt.show()\n\n\n\n\n\n\n\n\n\n# 아시아 인구 백분율 전체 평균\ndf2['percent'].mean()\n\nnp.float64(0.4872461834357345)\n\n\n\n# 아시아 인구 백분율 전체 평균\nimport numpy as np\ndf2['대소비교'] = np.where(df2['percent']&gt;df2['percent'].mean(), 'large', 'small')\ndf2\n\n\n\n\n\n\n\n\nPID\ncounty\nstate\narea\ntotal\npopdensity\npopwhite\npopblack\npopamerindian\nasian\n...\npoppovertyknown\npercpovertyknown\npercbelowpoverty\npercchildbelowpovert\npercadultpoverty\npercelderlypoverty\ninmetro\ncategory\npercent\n대소비교\n\n\n\n\n0\n561\nADAMS\nIL\n0.052\n66090\n1270.961540\n63917\n1702\n98\n249\n...\n63628\n96.274777\n13.151443\n18.011717\n11.009776\n12.443812\n0\nAAR\n0.376759\nsmall\n\n\n1\n562\nALEXANDER\nIL\n0.014\n10626\n759.000000\n7054\n3496\n19\n48\n...\n10529\n99.087145\n32.244278\n45.826514\n27.385647\n25.228976\n0\nLHR\n0.451722\nsmall\n\n\n2\n563\nBOND\nIL\n0.022\n14991\n681.409091\n14477\n429\n35\n16\n...\n14235\n94.956974\n12.068844\n14.036061\n10.852090\n12.697410\n0\nAAR\n0.106731\nsmall\n\n\n3\n564\nBOONE\nIL\n0.017\n30806\n1812.117650\n29344\n127\n46\n150\n...\n30337\n98.477569\n7.209019\n11.179536\n5.536013\n6.217047\n1\nALU\n0.486918\nsmall\n\n\n4\n565\nBROWN\nIL\n0.018\n5836\n324.222222\n5264\n547\n14\n5\n...\n4815\n82.505140\n13.520249\n13.022889\n11.143211\n19.200000\n0\nAAR\n0.085675\nsmall\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n432\n3048\nWAUKESHA\nWI\n0.034\n304715\n8962.205880\n298313\n1096\n672\n2699\n...\n299802\n98.387674\n3.121060\n3.785820\n2.590061\n4.085479\n1\nHLU\n0.885746\nlarge\n\n\n433\n3049\nWAUPACA\nWI\n0.045\n46104\n1024.533330\n45695\n22\n125\n92\n...\n44412\n96.330036\n8.488697\n10.071411\n6.953799\n10.338641\n0\nAAR\n0.199549\nsmall\n\n\n434\n3050\nWAUSHARA\nWI\n0.037\n19385\n523.918919\n19094\n29\n70\n43\n...\n19163\n98.854785\n13.786985\n20.050708\n11.695784\n11.804558\n0\nAAR\n0.221821\nsmall\n\n\n435\n3051\nWINNEBAGO\nWI\n0.035\n140320\n4009.142860\n136822\n697\n685\n1728\n...\n133950\n95.460376\n8.804031\n10.592031\n8.660587\n6.661094\n1\nHAU\n1.231471\nlarge\n\n\n436\n3052\nWOOD\nWI\n0.048\n73605\n1533.437500\n72157\n90\n481\n722\n...\n72685\n98.750085\n8.525831\n11.162997\n7.375656\n7.882918\n0\nAAR\n0.980912\nlarge\n\n\n\n\n437 rows × 30 columns\n\n\n\nQ5. large와 small에 해당하는 지역이 얼마나 많은지 빈도표와 빈도 막대 그래프를 만들어 확인해보세요\n\ncount = df2['대소비교'].value_counts()\n\n\nimport matplotlib.pyplot as plt\ncount.plot.bar(rot=0)\nplt.show()\nplt.clf()\n\nC:\\Users\\USER\\.conda\\envs\\lsbigdata\\Lib\\site-packages\\IPython\\core\\pylabtools.py:170: UserWarning:\n\nGlyph 45824 (\\N{HANGUL SYLLABLE DAE}) missing from font(s) DejaVu Sans.\n\nC:\\Users\\USER\\.conda\\envs\\lsbigdata\\Lib\\site-packages\\IPython\\core\\pylabtools.py:170: UserWarning:\n\nGlyph 49548 (\\N{HANGUL SYLLABLE SO}) missing from font(s) DejaVu Sans.\n\nC:\\Users\\USER\\.conda\\envs\\lsbigdata\\Lib\\site-packages\\IPython\\core\\pylabtools.py:170: UserWarning:\n\nGlyph 48708 (\\N{HANGUL SYLLABLE BI}) missing from font(s) DejaVu Sans.\n\nC:\\Users\\USER\\.conda\\envs\\lsbigdata\\Lib\\site-packages\\IPython\\core\\pylabtools.py:170: UserWarning:\n\nGlyph 44368 (\\N{HANGUL SYLLABLE GYO}) missing from font(s) DejaVu Sans.\n\n\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "myblog",
+    "section": "",
+    "text": "Homework8\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nSep 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework7\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nSep 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework6\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nAug 5, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework5\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nJul 31, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework4\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nJul 29, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework3\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nJul 25, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework2\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework1\n\n\n\nHomework\n\n\n\n\n\n\n\nhg.park\n\n\nJul 12, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/hw3/textbook-chap8.html",
+    "href": "posts/hw3/textbook-chap8.html",
+    "title": "HomeWork2",
+    "section": "",
+    "text": "import pandas as pd\nmpg = pd.read_csv(\"data/mpg.csv\")\n\nSeaborn 패키지 불러오기\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport plotly.express as px\n\nscatter()사용하기 * seaborn을 사용한 산점도\n\nsns.scatterplot(data=mpg,\n                x='displ', y=\"hwy\",\n                hue = \"drv\")\\\n    .set(xlim=[3,6], ylim=[10,30])\n\n\n\n\n\n\n\n\n\nplotly를 사용한 산점도\n\n\npx.scatter(data_frame=mpg,\n           x = \"displ\", y=\"hwy\",\n           color = \"drv\")\n\n                                                \n\n\nbarplot() 사용하기 데이터 전처리하기\n\ndf_mpg = mpg.groupby(\"drv\", as_index=False)\\\n            .agg(mean_hwy=(\"hwy\",\"mean\"))\ndf_mpg\n\n\n\n\n\n\n\n\ndrv\nmean_hwy\n\n\n\n\n0\n4\n19.174757\n\n\n1\nf\n28.160377\n\n\n2\nr\n21.000000\n\n\n\n\n\n\n\nbarplot() 사용해서 그래프 그리기\n\nsns.barplot(data=df_mpg.sort_values(\"mean_hwy\"),\n            x = \"drv\", y = \"mean_hwy\",\n            hue = \"drv\")\n\n\n\n\n\n\n\n\ncountplot() 사용하기\n\np204. 혼자서 해보기\nQ1. mpg데이터의 cty(도시연비)와 hwy(고속도로 연비) 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 cty, y축은 hwy로 된 산점도를 만들어 보세요\n힌트) sns.scatterplot()을 이용해 산점도를 만들어 보세요.\n\nsns.scatterplot(data=mpg,\n            x = \"cty\", y = \"hwy\")\n\n\n\n\n\n\n\n\nQ2. 미국의 지역별 인구통계 정보를 담은 midwest.csv를 이용해 전체 인구와 아시아인 인구 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 poptotal(전체 인구), y축은 popasian(아시아인 인구)으로 된 산점도를 만들어보세요. 전체 인구는 50만명 이하, 아시아인 인구는 1만 명 이하인 지역만 산점도에 표시되게 설정하세요.\n힌트) sns.set()을 이용해 조건에 맞게 축을 설정하면 됩니다.\n\nmidwest = pd.read_csv('data/midwest.csv')\n\nsns.scatterplot(data=midwest,\n            x = \"poptotal\", y = \"popasian\")\\\n            .set(xlim = [0,500000], ylim = [0,10000])\n\n\n\n\n\n\n\n\n\np211. 혼자서 해보기\nQ1. 어떤 회사에서 생산한 suv차종의 도시 연비가 높은지 알아보려고 합니다. suv차종을 대상으로 cty(도시 연비)평균이 가장 높은 회사 다섯 곳을 막대 그래프로 표현해 보세요. 막대는 연비가 높은 순으로 정렬하세요.\n힌트) 우선 그래프로 나타낼 집단별 평균표를 만들어야 합니다. df.query()로 suv차종만 추출한 다음 groupby()와 agg()로 회사별 cty평균을 구하고 sort_values()와 head()로 상위 5행을 추출하세요. 이렇게 만든 표를 sns.barplot()을 이용해 막대 그래프로 만들면 됩니다.\n\nimport pandas as pd\nmpg = pd.read_csv('data/mpg.csv')\n\n\nimport pandas as pd\nmpg = pd.read_csv('data/mpg.csv')\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\ndf = mpg.query('category == \"suv\"')\\\n        .groupby('manufacturer', as_index=False)\\\n        .agg(cty_mean = ('cty','mean'))\\\n        .sort_values('cty_mean', ascending=False)\\\n        .head()\n\ndf\n\nsns.barplot(data=df, x=\"manufacturer\", y = \"cty_mean\", hue=\"manufacturer\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nQ2. 자동차 중에 어떤 category(자동차 종류)가 많은지 알아보려고 합니다. sns.barplot()을 이용해 자동차 종류별 빈도를 표현한 막대 그래프를 만들어 보세요. 막대는 빈도가 높은 순으로 정렬하세요.\n\nimport pandas as pd\nmpg = pd.read_csv('data/mpg.csv')\n\nimport seaborn as sns\n\ndf2 = mpg.groupby('category', as_index=False)\\\n         .agg(category_count = ('category','count'))\\\n         .sort_values('category_count', ascending=False)\n\ndf2\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.barplot(data=df2, x=\"category\", y = \"category_count\", hue=\"category\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n힌트) 빈도가 높은 순으로 정렬해 빈도표를 만든 다음 sns.barplot()을 이용해 막대 그래프를 만들어 보세요."
+  },
+  {
+    "objectID": "posts/hw3/textbook-chap8.html#빈도-막대-그래프-그리기",
+    "href": "posts/hw3/textbook-chap8.html#빈도-막대-그래프-그리기",
+    "title": "HomeWork2",
+    "section": "",
+    "text": "import pandas as pd\nmpg = pd.read_csv(\"data/mpg.csv\")\n\nSeaborn 패키지 불러오기\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport plotly.express as px\n\nscatter()사용하기 * seaborn을 사용한 산점도\n\nsns.scatterplot(data=mpg,\n                x='displ', y=\"hwy\",\n                hue = \"drv\")\\\n    .set(xlim=[3,6], ylim=[10,30])\n\n\n\n\n\n\n\n\n\nplotly를 사용한 산점도\n\n\npx.scatter(data_frame=mpg,\n           x = \"displ\", y=\"hwy\",\n           color = \"drv\")\n\n                                                \n\n\nbarplot() 사용하기 데이터 전처리하기\n\ndf_mpg = mpg.groupby(\"drv\", as_index=False)\\\n            .agg(mean_hwy=(\"hwy\",\"mean\"))\ndf_mpg\n\n\n\n\n\n\n\n\ndrv\nmean_hwy\n\n\n\n\n0\n4\n19.174757\n\n\n1\nf\n28.160377\n\n\n2\nr\n21.000000\n\n\n\n\n\n\n\nbarplot() 사용해서 그래프 그리기\n\nsns.barplot(data=df_mpg.sort_values(\"mean_hwy\"),\n            x = \"drv\", y = \"mean_hwy\",\n            hue = \"drv\")\n\n\n\n\n\n\n\n\ncountplot() 사용하기\n\np204. 혼자서 해보기\nQ1. mpg데이터의 cty(도시연비)와 hwy(고속도로 연비) 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 cty, y축은 hwy로 된 산점도를 만들어 보세요\n힌트) sns.scatterplot()을 이용해 산점도를 만들어 보세요.\n\nsns.scatterplot(data=mpg,\n            x = \"cty\", y = \"hwy\")\n\n\n\n\n\n\n\n\nQ2. 미국의 지역별 인구통계 정보를 담은 midwest.csv를 이용해 전체 인구와 아시아인 인구 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 poptotal(전체 인구), y축은 popasian(아시아인 인구)으로 된 산점도를 만들어보세요. 전체 인구는 50만명 이하, 아시아인 인구는 1만 명 이하인 지역만 산점도에 표시되게 설정하세요.\n힌트) sns.set()을 이용해 조건에 맞게 축을 설정하면 됩니다.\n\nmidwest = pd.read_csv('data/midwest.csv')\n\nsns.scatterplot(data=midwest,\n            x = \"poptotal\", y = \"popasian\")\\\n            .set(xlim = [0,500000], ylim = [0,10000])\n\n\n\n\n\n\n\n\n\np211. 혼자서 해보기\nQ1. 어떤 회사에서 생산한 suv차종의 도시 연비가 높은지 알아보려고 합니다. suv차종을 대상으로 cty(도시 연비)평균이 가장 높은 회사 다섯 곳을 막대 그래프로 표현해 보세요. 막대는 연비가 높은 순으로 정렬하세요.\n힌트) 우선 그래프로 나타낼 집단별 평균표를 만들어야 합니다. df.query()로 suv차종만 추출한 다음 groupby()와 agg()로 회사별 cty평균을 구하고 sort_values()와 head()로 상위 5행을 추출하세요. 이렇게 만든 표를 sns.barplot()을 이용해 막대 그래프로 만들면 됩니다.\n\nimport pandas as pd\nmpg = pd.read_csv('data/mpg.csv')\n\n\nimport pandas as pd\nmpg = pd.read_csv('data/mpg.csv')\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\ndf = mpg.query('category == \"suv\"')\\\n        .groupby('manufacturer', as_index=False)\\\n        .agg(cty_mean = ('cty','mean'))\\\n        .sort_values('cty_mean', ascending=False)\\\n        .head()\n\ndf\n\nsns.barplot(data=df, x=\"manufacturer\", y = \"cty_mean\", hue=\"manufacturer\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nQ2. 자동차 중에 어떤 category(자동차 종류)가 많은지 알아보려고 합니다. sns.barplot()을 이용해 자동차 종류별 빈도를 표현한 막대 그래프를 만들어 보세요. 막대는 빈도가 높은 순으로 정렬하세요.\n\nimport pandas as pd\nmpg = pd.read_csv('data/mpg.csv')\n\nimport seaborn as sns\n\ndf2 = mpg.groupby('category', as_index=False)\\\n         .agg(category_count = ('category','count'))\\\n         .sort_values('category_count', ascending=False)\n\ndf2\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.barplot(data=df2, x=\"category\", y = \"category_count\", hue=\"category\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n힌트) 빈도가 높은 순으로 정렬해 빈도표를 만든 다음 sns.barplot()을 이용해 막대 그래프를 만들어 보세요."
+  },
+  {
+    "objectID": "posts/hw2/textbook-chap8.html",
+    "href": "posts/hw2/textbook-chap8.html",
+    "title": "Homework2",
+    "section": "",
+    "text": "import pandas as pd\nmpg = pd.read_csv(\"data/mpg.csv\")\n\nSeaborn 패키지 불러오기\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport plotly.express as px\n\nscatter()사용하기 * seaborn을 사용한 산점도\n\nsns.scatterplot(data=mpg,\n                x='displ', y=\"hwy\",\n                hue = \"drv\")\\\n    .set(xlim=[3,6], ylim=[10,30])\n\n\n\n\n\n\n\n\n\nplotly를 사용한 산점도\n\n\npx.scatter(data_frame=mpg,\n           x = \"displ\", y=\"hwy\",\n           color = \"drv\")\n\n                                                \n\n\nbarplot() 사용하기 데이터 전처리하기\n\ndf_mpg = mpg.groupby(\"drv\", as_index=False)\\\n            .agg(mean_hwy=(\"hwy\",\"mean\"))\ndf_mpg\n\n\n\n\n\n\n\n\ndrv\nmean_hwy\n\n\n\n\n0\n4\n19.174757\n\n\n1\nf\n28.160377\n\n\n2\nr\n21.000000\n\n\n\n\n\n\n\nbarplot() 사용해서 그래프 그리기\n\nsns.barplot(data=df_mpg.sort_values(\"mean_hwy\"),\n            x = \"drv\", y = \"mean_hwy\",\n            hue = \"drv\")\n\n\n\n\n\n\n\n\ncountplot() 사용하기\n\np204. 혼자서 해보기\nQ1. mpg데이터의 cty(도시연비)와 hwy(고속도로 연비) 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 cty, y축은 hwy로 된 산점도를 만들어 보세요\n힌트) sns.scatterplot()을 이용해 산점도를 만들어 보세요.\n\nsns.scatterplot(data=mpg,\n            x = \"cty\", y = \"hwy\")\n\n\n\n\n\n\n\n\nQ2. 미국의 지역별 인구통계 정보를 담은 midwest.csv를 이용해 전체 인구와 아시아인 인구 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 poptotal(전체 인구), y축은 popasian(아시아인 인구)으로 된 산점도를 만들어보세요. 전체 인구는 50만명 이하, 아시아인 인구는 1만 명 이하인 지역만 산점도에 표시되게 설정하세요.\n힌트) sns.set()을 이용해 조건에 맞게 축을 설정하면 됩니다.\n\nmidwest = pd.read_csv('data/midwest.csv')\n\nsns.scatterplot(data=midwest,\n            x = \"poptotal\", y = \"popasian\")\\\n            .set(xlim = [0,500000], ylim = [0,10000])\n\n\n\n\n\n\n\n\n\np211. 혼자서 해보기\nQ1. 어떤 회사에서 생산한 suv차종의 도시 연비가 높은지 알아보려고 합니다. suv차종을 대상으로 cty(도시 연비)평균이 가장 높은 회사 다섯 곳을 막대 그래프로 표현해 보세요. 막대는 연비가 높은 순으로 정렬하세요.\n힌트) 우선 그래프로 나타낼 집단별 평균표를 만들어야 합니다. df.query()로 suv차종만 추출한 다음 groupby()와 agg()로 회사별 cty평균을 구하고 sort_values()와 head()로 상위 5행을 추출하세요. 이렇게 만든 표를 sns.barplot()을 이용해 막대 그래프로 만들면 됩니다.\n\nimport pandas as pd\nmpg = pd.read_csv('data/mpg.csv')\n\n\nimport pandas as pd\nmpg = pd.read_csv('data/mpg.csv')\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\ndf = mpg.query('category == \"suv\"')\\\n        .groupby('manufacturer', as_index=False)\\\n        .agg(cty_mean = ('cty','mean'))\\\n        .sort_values('cty_mean', ascending=False)\\\n        .head()\n\ndf\n\nsns.barplot(data=df, x=\"manufacturer\", y = \"cty_mean\", hue=\"manufacturer\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nQ2. 자동차 중에 어떤 category(자동차 종류)가 많은지 알아보려고 합니다. sns.barplot()을 이용해 자동차 종류별 빈도를 표현한 막대 그래프를 만들어 보세요. 막대는 빈도가 높은 순으로 정렬하세요.\n\nimport pandas as pd\nmpg = pd.read_csv('data/mpg.csv')\n\nimport seaborn as sns\n\ndf2 = mpg.groupby('category', as_index=False)\\\n         .agg(category_count = ('category','count'))\\\n         .sort_values('category_count', ascending=False)\n\ndf2\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.barplot(data=df2, x=\"category\", y = \"category_count\", hue=\"category\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n힌트) 빈도가 높은 순으로 정렬해 빈도표를 만든 다음 sns.barplot()을 이용해 막대 그래프를 만들어 보세요."
+  },
+  {
+    "objectID": "posts/hw2/textbook-chap8.html#빈도-막대-그래프-그리기",
+    "href": "posts/hw2/textbook-chap8.html#빈도-막대-그래프-그리기",
+    "title": "Homework2",
+    "section": "",
+    "text": "import pandas as pd\nmpg = pd.read_csv(\"data/mpg.csv\")\n\nSeaborn 패키지 불러오기\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport plotly.express as px\n\nscatter()사용하기 * seaborn을 사용한 산점도\n\nsns.scatterplot(data=mpg,\n                x='displ', y=\"hwy\",\n                hue = \"drv\")\\\n    .set(xlim=[3,6], ylim=[10,30])\n\n\n\n\n\n\n\n\n\nplotly를 사용한 산점도\n\n\npx.scatter(data_frame=mpg,\n           x = \"displ\", y=\"hwy\",\n           color = \"drv\")\n\n                                                \n\n\nbarplot() 사용하기 데이터 전처리하기\n\ndf_mpg = mpg.groupby(\"drv\", as_index=False)\\\n            .agg(mean_hwy=(\"hwy\",\"mean\"))\ndf_mpg\n\n\n\n\n\n\n\n\ndrv\nmean_hwy\n\n\n\n\n0\n4\n19.174757\n\n\n1\nf\n28.160377\n\n\n2\nr\n21.000000\n\n\n\n\n\n\n\nbarplot() 사용해서 그래프 그리기\n\nsns.barplot(data=df_mpg.sort_values(\"mean_hwy\"),\n            x = \"drv\", y = \"mean_hwy\",\n            hue = \"drv\")\n\n\n\n\n\n\n\n\ncountplot() 사용하기\n\np204. 혼자서 해보기\nQ1. mpg데이터의 cty(도시연비)와 hwy(고속도로 연비) 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 cty, y축은 hwy로 된 산점도를 만들어 보세요\n힌트) sns.scatterplot()을 이용해 산점도를 만들어 보세요.\n\nsns.scatterplot(data=mpg,\n            x = \"cty\", y = \"hwy\")\n\n\n\n\n\n\n\n\nQ2. 미국의 지역별 인구통계 정보를 담은 midwest.csv를 이용해 전체 인구와 아시아인 인구 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 poptotal(전체 인구), y축은 popasian(아시아인 인구)으로 된 산점도를 만들어보세요. 전체 인구는 50만명 이하, 아시아인 인구는 1만 명 이하인 지역만 산점도에 표시되게 설정하세요.\n힌트) sns.set()을 이용해 조건에 맞게 축을 설정하면 됩니다.\n\nmidwest = pd.read_csv('data/midwest.csv')\n\nsns.scatterplot(data=midwest,\n            x = \"poptotal\", y = \"popasian\")\\\n            .set(xlim = [0,500000], ylim = [0,10000])\n\n\n\n\n\n\n\n\n\np211. 혼자서 해보기\nQ1. 어떤 회사에서 생산한 suv차종의 도시 연비가 높은지 알아보려고 합니다. suv차종을 대상으로 cty(도시 연비)평균이 가장 높은 회사 다섯 곳을 막대 그래프로 표현해 보세요. 막대는 연비가 높은 순으로 정렬하세요.\n힌트) 우선 그래프로 나타낼 집단별 평균표를 만들어야 합니다. df.query()로 suv차종만 추출한 다음 groupby()와 agg()로 회사별 cty평균을 구하고 sort_values()와 head()로 상위 5행을 추출하세요. 이렇게 만든 표를 sns.barplot()을 이용해 막대 그래프로 만들면 됩니다.\n\nimport pandas as pd\nmpg = pd.read_csv('data/mpg.csv')\n\n\nimport pandas as pd\nmpg = pd.read_csv('data/mpg.csv')\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\ndf = mpg.query('category == \"suv\"')\\\n        .groupby('manufacturer', as_index=False)\\\n        .agg(cty_mean = ('cty','mean'))\\\n        .sort_values('cty_mean', ascending=False)\\\n        .head()\n\ndf\n\nsns.barplot(data=df, x=\"manufacturer\", y = \"cty_mean\", hue=\"manufacturer\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nQ2. 자동차 중에 어떤 category(자동차 종류)가 많은지 알아보려고 합니다. sns.barplot()을 이용해 자동차 종류별 빈도를 표현한 막대 그래프를 만들어 보세요. 막대는 빈도가 높은 순으로 정렬하세요.\n\nimport pandas as pd\nmpg = pd.read_csv('data/mpg.csv')\n\nimport seaborn as sns\n\ndf2 = mpg.groupby('category', as_index=False)\\\n         .agg(category_count = ('category','count'))\\\n         .sort_values('category_count', ascending=False)\n\ndf2\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.barplot(data=df2, x=\"category\", y = \"category_count\", hue=\"category\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n힌트) 빈도가 높은 순으로 정렬해 빈도표를 만든 다음 sns.barplot()을 이용해 막대 그래프를 만들어 보세요."
+  },
+  {
+    "objectID": "posts/hw3/normal_distribution_example.html",
+    "href": "posts/hw3/normal_distribution_example.html",
+    "title": "Homework3",
+    "section": "",
+    "text": "(from scipy.stat import norm 사용금지)\n\n\n\\[\nf(x ; \\mu, \\sigma) = \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{1}{2} \\left(\\frac{x - \\mu}{\\sigma}\\right)^2}\n\\] *** \\(\\mu\\)는 평균, \\(\\sigma\\)는 표준편차 ***\n\nimport math\ndef P(x, mu, sigma):\n    return (1 / (sigma * math.sqrt(2*math.pi))) * math.pow(math.e, (-1/2) * ((x - mu)/sigma) ** 2)\n\n# 99.7% 신뢰구간 mu - 3 sigma, mu + 3 sigma\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nmu = 3\nsigma = 2\n\nx = np.linspace(mu - 3*sigma, mu + 3*sigma, 10000)\n\nplt.plot(x, [P(x, mu, sigma) for x in x])\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw3/normal_distribution_example.html#정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu-3-sigma-2-의-pdf를-그릴-것.",
+    "href": "posts/hw3/normal_distribution_example.html#정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu-3-sigma-2-의-pdf를-그릴-것.",
+    "title": "Homework3",
+    "section": "",
+    "text": "(from scipy.stat import norm 사용금지)\n\n\n\\[\nf(x ; \\mu, \\sigma) = \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{1}{2} \\left(\\frac{x - \\mu}{\\sigma}\\right)^2}\n\\] *** \\(\\mu\\)는 평균, \\(\\sigma\\)는 표준편차 ***\n\nimport math\ndef P(x, mu, sigma):\n    return (1 / (sigma * math.sqrt(2*math.pi))) * math.pow(math.e, (-1/2) * ((x - mu)/sigma) ** 2)\n\n# 99.7% 신뢰구간 mu - 3 sigma, mu + 3 sigma\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nmu = 3\nsigma = 2\n\nx = np.linspace(mu - 3*sigma, mu + 3*sigma, 10000)\n\nplt.plot(x, [P(x, mu, sigma) for x in x])\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw3/normal_distribution_example.html#파이썬-scipy-패키지-사용해서-다음과-같은-확률을-구하시오.",
+    "href": "posts/hw3/normal_distribution_example.html#파이썬-scipy-패키지-사용해서-다음과-같은-확률을-구하시오.",
+    "title": "Homework3",
+    "section": "2. 파이썬 scipy 패키지 사용해서 다음과 같은 확률을 구하시오.",
+    "text": "2. 파이썬 scipy 패키지 사용해서 다음과 같은 확률을 구하시오.\n\nX ~ N(2, 3^2)\n\n\n1) P(X &lt; 3)\n\nfrom scipy.stats import norm\nnorm.cdf(3, loc=2, scale=3)\n\nnp.float64(0.6305586598182363)\n\n\n\n\n2) P(2 &lt; X &lt; 5)\n\nfrom scipy.stats import norm\nnorm.cdf(5, loc=2, scale=3) - norm.cdf(2, loc=2, scale=3)\n\nnp.float64(0.3413447460685429)\n\n\n\n\n3) P(X &lt; 3 or X &gt; 7)\n\nfrom scipy.stats import norm\nnorm.cdf(3, loc=2, scale=3) + (1 - norm.cdf(7, loc=2, scale=3))\n\nnp.float64(0.678349012091051)\n\n\n\n\n3. LS 빅데이터 스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?\n\n\nX ~ N(30, 2^2)\n\nfrom scipy.stats import norm\nnorm.ppf(0.95, loc=30, scale=2)\n\nnp.float64(33.28970725390295)"
+  },
+  {
+    "objectID": "posts/hw4/free_of_freedom.html",
+    "href": "posts/hw4/free_of_freedom.html",
+    "title": "Homework4",
+    "section": "",
+    "text": "# 균일 분포 uniform 라이브러리 호출\nfrom scipy.stats import uniform\n\n# X ~ U(a,b)\n# loc = a, scale = b - a\n# 균일분포 (3,7)에서 20개의 표본을 10000번 뽑음\nx = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\nx\n\n# 1. 분산 s_2 : n - 1로 나눈 분산\nimport numpy as np\ns_2 = x.var(axis=1, ddof=1)\ns_2\n\nimport matplotlib.pyplot as plt\nplt.hist(s_2, color = 'blue', alpha=0.4, label = 'n-1')\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n# 균일 분포 uniform 라이브러리 호출\nfrom scipy.stats import uniform\n\n# X ~ U(a,b)\n# loc = a, scale = b - a\n# 균일분포 (3,7)에서 20개의 표본을 10000번 뽑음\nx = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\nx\n\n# 2. 분산 k_2 : n으로 나눈 분산\n# np.var() 사용\nk_2 = x.var(axis=1, ddof=0)\nk_2\n\nimport matplotlib.pyplot as plt\nplt.hist(k_2, color = 'red', alpha=0.4, label = 'n')\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\n\n# 균일 분포 uniform 라이브러리 호출\nfrom scipy.stats import uniform\n\n# X ~ U(a,b)\n# loc = a, scale = b - a\n# 균일분포 (3,7)에서 20개의 표본을 10000번 뽑음\nx = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\nx\n\n# 1. 분산 s_2 : n - 1로 나눈 분산\nimport numpy as np\ns_2 = x.var(axis=1, ddof=1)\ns_2\n\n# 모분산\nv = np.var(x)\n\nimport matplotlib.pyplot as plt\nplt.hist(s_2, color = 'blue', alpha=0.4, label = 'n-1')\nplt.axvline(x=v, color='green', linestyle='-', linewidth=2)\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n# 균일 분포 uniform 라이브러리 호출\nfrom scipy.stats import uniform\n\n# X ~ U(a,b)\n# loc = a, scale = b - a\n# 균일분포 (3,7)에서 20개의 표본을 10000번 뽑음\nx = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\nx\n\n# 2. 분산 k_2 : n으로 나눈 분산\n# np.var() 사용\nk_2 = x.var(axis=1, ddof=0)\nk_2\n\n# 모분산\nv = np.var(x)\n\nimport matplotlib.pyplot as plt\nplt.hist(k_2, color = 'red', alpha=0.4, label = 'n')\nplt.axvline(x=v, color='green', linestyle='-', linewidth=2)\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\nn-1로 나눈 분산인 s_2의 분포는 모분산과 더 가깝고, 분포의 중앙에 모분산이 위치함. 반면 k_2의 분포는 모분산보다 왼쪽(더 작게)치우쳐 있음\nn으로 나눈 분산인 k_2는 표본 분산의 평균이 모분산보다 작아짐. 이를 보정하기 위해 n-1로 나누어줌, n-1로 나눈 분산 s_2은 모분산의 불평 추정량."
+  },
+  {
+    "objectID": "posts/hw4/free_of_freedom.html#표본-분산-계산-시-왜-n-1로-나누는지-알아보도록-하겠습니다.-균일분포-37에서-20개의-표본을-뽑아서-분산을-2가지-방법으로-추정해보세요.",
+    "href": "posts/hw4/free_of_freedom.html#표본-분산-계산-시-왜-n-1로-나누는지-알아보도록-하겠습니다.-균일분포-37에서-20개의-표본을-뽑아서-분산을-2가지-방법으로-추정해보세요.",
+    "title": "Homework4",
+    "section": "",
+    "text": "# 균일 분포 uniform 라이브러리 호출\nfrom scipy.stats import uniform\n\n# X ~ U(a,b)\n# loc = a, scale = b - a\n# 균일분포 (3,7)에서 20개의 표본을 10000번 뽑음\nx = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\nx\n\n# 1. 분산 s_2 : n - 1로 나눈 분산\nimport numpy as np\ns_2 = x.var(axis=1, ddof=1)\ns_2\n\nimport matplotlib.pyplot as plt\nplt.hist(s_2, color = 'blue', alpha=0.4, label = 'n-1')\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n# 균일 분포 uniform 라이브러리 호출\nfrom scipy.stats import uniform\n\n# X ~ U(a,b)\n# loc = a, scale = b - a\n# 균일분포 (3,7)에서 20개의 표본을 10000번 뽑음\nx = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\nx\n\n# 2. 분산 k_2 : n으로 나눈 분산\n# np.var() 사용\nk_2 = x.var(axis=1, ddof=0)\nk_2\n\nimport matplotlib.pyplot as plt\nplt.hist(k_2, color = 'red', alpha=0.4, label = 'n')\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\n\n# 균일 분포 uniform 라이브러리 호출\nfrom scipy.stats import uniform\n\n# X ~ U(a,b)\n# loc = a, scale = b - a\n# 균일분포 (3,7)에서 20개의 표본을 10000번 뽑음\nx = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\nx\n\n# 1. 분산 s_2 : n - 1로 나눈 분산\nimport numpy as np\ns_2 = x.var(axis=1, ddof=1)\ns_2\n\n# 모분산\nv = np.var(x)\n\nimport matplotlib.pyplot as plt\nplt.hist(s_2, color = 'blue', alpha=0.4, label = 'n-1')\nplt.axvline(x=v, color='green', linestyle='-', linewidth=2)\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n# 균일 분포 uniform 라이브러리 호출\nfrom scipy.stats import uniform\n\n# X ~ U(a,b)\n# loc = a, scale = b - a\n# 균일분포 (3,7)에서 20개의 표본을 10000번 뽑음\nx = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\nx\n\n# 2. 분산 k_2 : n으로 나눈 분산\n# np.var() 사용\nk_2 = x.var(axis=1, ddof=0)\nk_2\n\n# 모분산\nv = np.var(x)\n\nimport matplotlib.pyplot as plt\nplt.hist(k_2, color = 'red', alpha=0.4, label = 'n')\nplt.axvline(x=v, color='green', linestyle='-', linewidth=2)\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\nn-1로 나눈 분산인 s_2의 분포는 모분산과 더 가깝고, 분포의 중앙에 모분산이 위치함. 반면 k_2의 분포는 모분산보다 왼쪽(더 작게)치우쳐 있음\nn으로 나눈 분산인 k_2는 표본 분산의 평균이 모분산보다 작아짐. 이를 보정하기 위해 n-1로 나누어줌, n-1로 나눈 분산 s_2은 모분산의 불평 추정량."
+  },
+  {
+    "objectID": "posts/hw4/free_of_freedom.html#각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요.",
+    "href": "posts/hw4/free_of_freedom.html#각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요.",
+    "title": "Homework4",
+    "section": "",
+    "text": "from scipy.stats import norm\nnorm.cdf(3, loc=2, scale=3)\n\nnp.float64(0.6305586598182363)\n\n\n\n\n\nfrom scipy.stats import norm\nnorm.ppf(0.95, loc=30, scale=2)\n\nnp.float64(33.28970725390295)"
+  },
+  {
+    "objectID": "posts/hw5/confidence_interval.html",
+    "href": "posts/hw5/confidence_interval.html",
+    "title": "Homework5",
+    "section": "",
+    "text": "챕터 9-2 설문조사 그래프에서 각 성별 95% 신뢰구간 계산후 그리기\n\nnorm.ppf() 사용해서 그릴 것, 모분산은 표본 분산을 사용해서 추정, 위 아래 수직 막대기로 표시\n\nimport pandas as pd\nimport numpy as np\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\nraw_welfare = pd.read_spss(\"C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/koweps/Koweps_hpwc14_2019_beta2.sav\")\n\nwelfare = raw_welfare.copy()\nwelfare.shape\n\nwelfare = welfare.rename(\n    columns = {\n        \"h14_g3\" : \"sex\", \n        \"h14_g4\" : \"birth\",\n        \"h14_g10\" : \"marriage_type\",\n        \"h14_g11\" : \"religion\",\n        \"p1402_8aq1\" : \"income\",\n        \"h14_eco9\" : \"code_job\",\n        \"h14_reg7\" : \"code_region\"\n    }\n)\n\nwelfare = welfare[[\"sex\", \"birth\", \"marriage_type\",\n                    \"religion\",\"income\",\"code_job\",\"code_region\"]]\n                    \nwelfare['sex'].value_counts()\n\nwelfare['sex'] = np.where(welfare['sex'] == 1, 'male', 'female')\nwelfare\n\n\n\n\n\n\n\n\nsex\nbirth\nmarriage_type\nreligion\nincome\ncode_job\ncode_region\n\n\n\n\n0\nfemale\n1945.0\n2.0\n1.0\nNaN\nNaN\n1.0\n\n\n1\nmale\n1948.0\n2.0\n2.0\nNaN\nNaN\n1.0\n\n\n2\nmale\n1942.0\n3.0\n1.0\n107.0\n762.0\n1.0\n\n\n3\nmale\n1962.0\n1.0\n1.0\n192.0\n855.0\n1.0\n\n\n4\nfemale\n1963.0\n1.0\n1.0\nNaN\nNaN\n1.0\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n14413\nfemale\n1967.0\n1.0\n1.0\nNaN\nNaN\n5.0\n\n\n14414\nfemale\n1992.0\n5.0\n1.0\nNaN\nNaN\n5.0\n\n\n14415\nmale\n1995.0\n5.0\n1.0\nNaN\n910.0\n5.0\n\n\n14416\nfemale\n1998.0\n5.0\n1.0\n200.0\n246.0\n5.0\n\n\n14417\nmale\n2001.0\n0.0\n1.0\nNaN\nNaN\n5.0\n\n\n\n\n14418 rows × 7 columns\n\n\n\n\nsex_income = welfare.dropna(subset=\"income\")\\\n       .groupby(\"sex\", as_index=False)\\\n       .agg(mean_income = (\"income\",\"mean\"),\n            var_income = ('income', 'var'),\n            n_income = ('income', 'count'))\n\nsex_income\n\n\n\n\n\n\n\n\nsex\nmean_income\nvar_income\nn_income\n\n\n\n\n0\nfemale\n186.293096\n17439.157372\n2245\n\n\n1\nmale\n349.037571\n47463.961875\n2289\n\n\n\n\n\n\n\n\nsns.barplot(data=sex_income, x=\"sex\", y=\"mean_income\", hue=\"sex\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n# mu\nmu_female = sex_income.iloc[0,1]\nmu_male   = sex_income.iloc[1,1]\n\n# var\nfemale_var = sex_income.iloc[0,2]\nmale_var   = sex_income.iloc[1,2]\n\n# n\nfemale_n = sex_income.iloc[0,3]\nmale_n   = sex_income.iloc[1,3]\n\n# norm.ppf를 이용하여 여성의 income 95% 신뢰구간 위치 구해보자\nfrom scipy.stats import norm\nleft_ci_female = norm.ppf(0.025, loc = mu_female, scale = np.sqrt(female_var/female_n))\n# np.float64(180.83045468346842)\nright_ci_female = norm.ppf(0.975, loc = mu_female, scale = np.sqrt(female_var/female_n))\n# np.float64(191.75573685327993)\n\n# norm.ppf를 이용하여 남성의 income 95% 신뢰구간 위치 구해보자\nleft_ci_male = norm.ppf(0.025, loc = mu_male, scale = np.sqrt(male_var/male_n))\n# np.float64(340.11259229974775)\nright_ci_male = norm.ppf(0.975, loc = mu_male, scale = np.sqrt(male_var/male_n))\n# np.float64(357.96254968365116)\n\nsns.barplot(data = sex_income, x = 'sex', y = 'mean_income', hue = 'sex')\nplt.vlines(x=0, ymin=left_ci_female, ymax=right_ci_female, color='black', linewidth=10)\nplt.vlines(x=1, ymin=left_ci_male, ymax=right_ci_male, color='black', linewidth=10)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw6/p-values.html",
+    "href": "posts/hw6/p-values.html",
+    "title": "Homework6",
+    "section": "",
+    "text": "슬통 자동차는 매해 출시되는 신형 자동차의 에너지 소비효율 등급을 1등급으로 유지하고 있다. 22년 개발된 신형 모델이 한국 자동차 평가원에서 설정한 에너지 소비 효율등급 1등급을 받을 수 있을지 검정하려한다. 평가원에 따르면 1등급의 기준은 평균 복합 에너지 소비효율이 16.0 이상인 경우 부여한다고 한다. 다음은 신형 자동차 15대의 복합 에너지소비효율 측정한 결과이다.\n\\[\n15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927,15.382, 16.709, 16.804\n\\]\n표본에 의하여 판단해볼때, 현대자동차의 신형 모델은 에너지 효율 1등급으로 판단할 수 있을지 판단해보시오. (유의수준 1%로 설정)\n\n\n\\[\n귀무가설\\\nH_0: \\mu \\geq 16 \\\\\n대립가설\\\nH_a: \\mu &lt; 16 \\\\\n\\mu_0 = 16\n\\]\n\n\n\n\\[\nt = \\frac{\\bar{x} - \\mu_0}{\\frac{s}{\\sqrt{n}}}\n\\]\n\nimport numpy as np\n\nenergy = [15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927,15.382, 16.709, 16.804]\n\n# 표본 평균\nx_bar = np.mean(energy)\n# x_bar = sum(energy) / len(energy)\nprint(\"표본 평균 x_bar =\", x_bar.round(2))\n\n# 귀무가설 m0\nm0 = 16\nprint(\"귀무 가설의 m0 =\", m0)\n\n# 표본 표준 편차\ns = np.std(energy, ddof=1)\nprint(\"표본 표준 편차 s =\", s.round(2))\n\n# 표본의 개수\nn = len(energy)\nprint(\"표본 갯수 n =\", n)\n\n# t 분포를 따르는 표준화를 한 후 t값\nT = (x_bar - m0) / (s/np.sqrt(n))\nprint(\"검정통계량 =\", T.round(2))\n\n표본 평균 x_bar = 15.53\n귀무 가설의 m0 = 16\n표본 표준 편차 s = 0.98\n표본 갯수 n = 15\n검정통계량 = -1.85\n\n\n\n\n\n\n\n\n단측검정 p-value시각화\n\n\n\nfrom scipy.stats import t\n\n# 자유도 df\ndf = len(energy) - 1\n\np_values = t.cdf(T, df)\nprint(\"p-values =\", p_values.round(2))\n\np-values = 0.04\n\n\n\n\n\n\nCI_r = x_bar + t.ppf(0.975, df) * (s/np.sqrt(n))\nCI_l = x_bar + t.ppf(0.025, df) * (s/np.sqrt(n))\nprint(\"평균 복합 에너지 소비 효율의 95%신뢰 구간 = (\", CI_l.round(2), \"), (\", CI_r.round(2) ,\")\")\n\n평균 복합 에너지 소비 효율의 95%신뢰 구간 = ( 14.99 ), ( 16.07 )"
+  },
+  {
+    "objectID": "posts/hw6/p-values.html#adp-교재-57p-연습-문제",
+    "href": "posts/hw6/p-values.html#adp-교재-57p-연습-문제",
+    "title": "Homework6",
+    "section": "",
+    "text": "슬통 자동차는 매해 출시되는 신형 자동차의 에너지 소비효율 등급을 1등급으로 유지하고 있다. 22년 개발된 신형 모델이 한국 자동차 평가원에서 설정한 에너지 소비 효율등급 1등급을 받을 수 있을지 검정하려한다. 평가원에 따르면 1등급의 기준은 평균 복합 에너지 소비효율이 16.0 이상인 경우 부여한다고 한다. 다음은 신형 자동차 15대의 복합 에너지소비효율 측정한 결과이다.\n\\[\n15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927,15.382, 16.709, 16.804\n\\]\n표본에 의하여 판단해볼때, 현대자동차의 신형 모델은 에너지 효율 1등급으로 판단할 수 있을지 판단해보시오. (유의수준 1%로 설정)\n\n\n\\[\n귀무가설\\\nH_0: \\mu \\geq 16 \\\\\n대립가설\\\nH_a: \\mu &lt; 16 \\\\\n\\mu_0 = 16\n\\]\n\n\n\n\\[\nt = \\frac{\\bar{x} - \\mu_0}{\\frac{s}{\\sqrt{n}}}\n\\]\n\nimport numpy as np\n\nenergy = [15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927,15.382, 16.709, 16.804]\n\n# 표본 평균\nx_bar = np.mean(energy)\n# x_bar = sum(energy) / len(energy)\nprint(\"표본 평균 x_bar =\", x_bar.round(2))\n\n# 귀무가설 m0\nm0 = 16\nprint(\"귀무 가설의 m0 =\", m0)\n\n# 표본 표준 편차\ns = np.std(energy, ddof=1)\nprint(\"표본 표준 편차 s =\", s.round(2))\n\n# 표본의 개수\nn = len(energy)\nprint(\"표본 갯수 n =\", n)\n\n# t 분포를 따르는 표준화를 한 후 t값\nT = (x_bar - m0) / (s/np.sqrt(n))\nprint(\"검정통계량 =\", T.round(2))\n\n표본 평균 x_bar = 15.53\n귀무 가설의 m0 = 16\n표본 표준 편차 s = 0.98\n표본 갯수 n = 15\n검정통계량 = -1.85\n\n\n\n\n\n\n\n\n단측검정 p-value시각화\n\n\n\nfrom scipy.stats import t\n\n# 자유도 df\ndf = len(energy) - 1\n\np_values = t.cdf(T, df)\nprint(\"p-values =\", p_values.round(2))\n\np-values = 0.04\n\n\n\n\n\n\nCI_r = x_bar + t.ppf(0.975, df) * (s/np.sqrt(n))\nCI_l = x_bar + t.ppf(0.025, df) * (s/np.sqrt(n))\nprint(\"평균 복합 에너지 소비 효율의 95%신뢰 구간 = (\", CI_l.round(2), \"), (\", CI_r.round(2) ,\")\")\n\n평균 복합 에너지 소비 효율의 95%신뢰 구간 = ( 14.99 ), ( 16.07 )"
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Recent posts",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nHomework6\n\n\n\nAug 5, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework5\n\n\n\nJul 31, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework4\n\n\n\nJul 29, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework3\n\n\n\nJul 25, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework2\n\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework1\n\n\n\nJul 12, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/hw7/chi.html",
+    "href": "posts/hw7/chi.html",
+    "title": "Homework7",
+    "section": "",
+    "text": "2022년에 실시 된 ADP 실기 시험의 통계파트 표준점수는 평균이 30, 표준편차가 5인 정규분포를 따른다고 한다.\n\n\n\n# X ~ N(30, 5^2)\nfrom scipy.stats import norm\nimport numpy as np\n\nx = np.linspace(10, 50, 500)\npdf_values = norm.pdf(x, loc=30, scale=5)\n\nimport matplotlib.pyplot as plt\n\nplt.plot(x, pdf_values)\n\n\n\n\n\n\n\n\n\n\n\n\n# P(X&gt;45) = ?\n1 - norm.cdf(45, loc=30, scale=5)\n\nnp.float64(0.0013498980316301035)\n\n\n\n\n\n\nnorm.ppf(0.9, loc=30, scale=5)\n\nnp.float64(36.407757827723)\n\n\n\n\n\n\n# X_bar 표본, n = 16\n# X_bar ~ N(30, 5^2 / 16)\nx = np.linspace(10, 50, 500)\nx_bar_pdf_values = norm.pdf(x, loc=30, scale=np.sqrt((5**2)/16))\npdf_values = norm.pdf(x, loc=30, scale=5)\nplt.plot(x, pdf_values)\nplt.plot(x, x_bar_pdf_values, color=\"red\")\n\n\n\n\n\n\n\n\n\n\n\n\n# X_bar 표본, n = 16\n# X_bar ~ N(30, 5^2 / 16)\n# P(X_bar&gt;38) = ? \n1 - norm.cdf(38, loc=30, scale=np.sqrt((5**2)/16))\n\nnp.float64(7.76885222819601e-11)\n\n\n\n\n\n\nCovid‑19의 발병률은 1%라고 한다. 다음은 이번 코로나 사태로 인하여 코로나 의심 환자들 1,085 명을 대상으로 슬통 회사의 “다잡아” 키트를 사용하여 양성 반응을 체크한 결과이다. \n\n\n\n# P(키트 양성|실제 양성)\n# P(키트 양성 ∩ 실제 양성) / P(실제 양성)\nimport pandas as pd\ncovid = pd.DataFrame({\n    \"구분\": [\"키트 양성\", \"키트 음성\"],\n    \"실제 양성\": [370, 15],\n    \"실제 음성\": [10, 690]\n})\ncovid\n\n\n\n\n\n\n\n\n구분\n실제 양성\n실제 음성\n\n\n\n\n0\n키트 양성\n370\n10\n\n\n1\n키트 음성\n15\n690\n\n\n\n\n\n\n\n\n# P(키트 양성|실제 양성)\n# P(키트 양성 ∩ 실제 양성) / P(실제 양성)\ncovid.loc[0, '실제 양성'] / covid.loc[:, '실제 양성'].sum()\n\nnp.float64(0.961038961038961)\n\n\n\n\n\n\n# P(실제 양성|키트 양성)\n# P(실제 양성 ∩ 키트 양성) / P(키트 양성)\ncovid.loc[0, '실제 양성'] / covid[covid['구분']=='키트 양성'][['실제 양성','실제 음성']].sum(axis='columns')\n\n0    0.973684\ndtype: float64\n\n\n→ 표본 집단의 유병률과 모집단의 유병률 차이가 있기 때문.\n\n\n\n\n# 코로나 발병률 = 0.01\n# P(실제 양성) = 0.01 이란 의미\n# P(실제 양성|키트 양성) = P(실제 양성 ∩ 키트 양성) / P(키트 양성) =  P(실제양성)P(키트양성|실제양성) / {P(실제양성)P(키트양성|실제양성) + P(실제음성)P(키트양성|실제음성)}\n# a = P(실제양성)P(키트양성|실제양성)\n# b = P(실제음성)P(키트양성|실제음성) = P(실제음성) * (P(키트양성∩실제음성)/P(실제음성))\n# a / ( a + b )\na = 0.01 * (covid.loc[0, '실제 양성'] / covid.loc[:, '실제 양성'].sum())\nb = 0.99 * (covid.loc[0, '실제 음성'] / covid.loc[:, '실제 음성'].sum())\nprob = a / (a + b)\nprint(f\"따라서 키트의 결과값이 양성으로 나온 사람이 실제로 코로나 바이러스에 걸려있을 확률은 {prob*100:.3f}%\")\n\n따라서 키트의 결과값이 양성으로 나온 사람이 실제로 코로나 바이러스에 걸려있을 확률은 40.459%\n\n\n\n\n\n\n\\[\n자유도가 𝑘인 카이제곱분포를 따르는 확률변수 𝑋 를 X \\sim \\chi^2(k)과 같이 나타내고,\n이 확률변수의 확률밀도함수는 다음과 같습니다.\n\\] \\[\nf_X(x; k) = \\frac{1}{2^{k/2} \\Gamma(k/2)} x^{k/2-1} e^{-x/2}\n\\]\n\n\n\nfrom scipy.stats import chi2\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nk = np.linspace(0, 40, 500)\ny = chi2.pdf(k, df=4)\nplt.plot(k, y)\n\n\n\n\n\n\n\n\n\n\n\n\nchi2.cdf(5, df=4) - chi2.cdf(3, df=4)\n\nnp.float64(0.27052790518742903)\n\n\n\n\n\n\nnp.random.seed(20240902)\nk=chi2.rvs(df=4, size=1000)\nplt.hist(k)\n\n(array([237., 295., 227., 111.,  58.,  35.,  19.,   9.,   7.,   2.]),\n array([ 0.06952138,  1.84067646,  3.61183154,  5.38298663,  7.15414171,\n         8.92529679, 10.69645188, 12.46760696, 14.23876204, 16.00991713,\n        17.78107221]),\n &lt;BarContainer object of 10 artists&gt;)\n\n\n\n\n\n\n\n\n\n\n\n\n\nchi2.ppf(0.95, df=4)\n\nnp.float64(9.487729036781154)\n\n\n\n\n\n\nnp.percentile(k, 95)\n\nnp.float64(9.853854661290491)\n\n\n\n\n\n• 같은 방법으로 500개의 \\[s^2\\] 들, \\[s_{1}^2\\], \\[s_{2}^2\\], …, \\[s_{500}^2\\] 발생시킵니다. • 발생한 500개의 \\[s^2\\] 들 각각에 4.75를 곱하고, 그것들의 히스토그램을 그려보세요. (히스토그램을 그릴 때 probability = TRUE 옵션을 사용해서 그릴 것) • 위에서 그린 히스토그램에 자유도가 19인 카이제곱분포 확률밀도함수를 겹쳐그려보세요.\n\nnp.random.seed(20240902)\nvar_samples = []\n\nfor i in range(500):\n    x = norm.rvs(loc=3, scale=2, size=20)\n    var_samples.append(np.var(x, ddof=1))\n\nvar_samples = np.array(var_samples) * 4.75\nplt.hist(var_samples, density=True)\n\nnp.random.seed(20240902)\nk = np.linspace(0, var_samples.max(), 500)\ny = chi2.pdf(k, df=19)\nplt.plot(k, y, color=\"red\")"
+  },
+  {
+    "objectID": "posts/hw7/chi.html#adp-표본점수",
+    "href": "posts/hw7/chi.html#adp-표본점수",
+    "title": "Homework7",
+    "section": "",
+    "text": "2022년에 실시 된 ADP 실기 시험의 통계파트 표준점수는 평균이 30, 표준편차가 5인 정규분포를 따른다고 한다.\n\n\n\n# X ~ N(30, 5^2)\nfrom scipy.stats import norm\nimport numpy as np\n\nx = np.linspace(10, 50, 500)\npdf_values = norm.pdf(x, loc=30, scale=5)\n\nimport matplotlib.pyplot as plt\n\nplt.plot(x, pdf_values)\n\n\n\n\n\n\n\n\n\n\n\n\n# P(X&gt;45) = ?\n1 - norm.cdf(45, loc=30, scale=5)\n\nnp.float64(0.0013498980316301035)\n\n\n\n\n\n\nnorm.ppf(0.9, loc=30, scale=5)\n\nnp.float64(36.407757827723)\n\n\n\n\n\n\n# X_bar 표본, n = 16\n# X_bar ~ N(30, 5^2 / 16)\nx = np.linspace(10, 50, 500)\nx_bar_pdf_values = norm.pdf(x, loc=30, scale=np.sqrt((5**2)/16))\npdf_values = norm.pdf(x, loc=30, scale=5)\nplt.plot(x, pdf_values)\nplt.plot(x, x_bar_pdf_values, color=\"red\")\n\n\n\n\n\n\n\n\n\n\n\n\n# X_bar 표본, n = 16\n# X_bar ~ N(30, 5^2 / 16)\n# P(X_bar&gt;38) = ? \n1 - norm.cdf(38, loc=30, scale=np.sqrt((5**2)/16))\n\nnp.float64(7.76885222819601e-11)"
+  },
+  {
+    "objectID": "posts/hw7/chi.html#covid-19-발병률",
+    "href": "posts/hw7/chi.html#covid-19-발병률",
+    "title": "Homework7",
+    "section": "",
+    "text": "Covid‑19의 발병률은 1%라고 한다. 다음은 이번 코로나 사태로 인하여 코로나 의심 환자들 1,085 명을 대상으로 슬통 회사의 “다잡아” 키트를 사용하여 양성 반응을 체크한 결과이다. \n\n\n\n# P(키트 양성|실제 양성)\n# P(키트 양성 ∩ 실제 양성) / P(실제 양성)\nimport pandas as pd\ncovid = pd.DataFrame({\n    \"구분\": [\"키트 양성\", \"키트 음성\"],\n    \"실제 양성\": [370, 15],\n    \"실제 음성\": [10, 690]\n})\ncovid\n\n\n\n\n\n\n\n\n구분\n실제 양성\n실제 음성\n\n\n\n\n0\n키트 양성\n370\n10\n\n\n1\n키트 음성\n15\n690\n\n\n\n\n\n\n\n\n# P(키트 양성|실제 양성)\n# P(키트 양성 ∩ 실제 양성) / P(실제 양성)\ncovid.loc[0, '실제 양성'] / covid.loc[:, '실제 양성'].sum()\n\nnp.float64(0.961038961038961)\n\n\n\n\n\n\n# P(실제 양성|키트 양성)\n# P(실제 양성 ∩ 키트 양성) / P(키트 양성)\ncovid.loc[0, '실제 양성'] / covid[covid['구분']=='키트 양성'][['실제 양성','실제 음성']].sum(axis='columns')\n\n0    0.973684\ndtype: float64\n\n\n→ 표본 집단의 유병률과 모집단의 유병률 차이가 있기 때문.\n\n\n\n\n# 코로나 발병률 = 0.01\n# P(실제 양성) = 0.01 이란 의미\n# P(실제 양성|키트 양성) = P(실제 양성 ∩ 키트 양성) / P(키트 양성) =  P(실제양성)P(키트양성|실제양성) / {P(실제양성)P(키트양성|실제양성) + P(실제음성)P(키트양성|실제음성)}\n# a = P(실제양성)P(키트양성|실제양성)\n# b = P(실제음성)P(키트양성|실제음성) = P(실제음성) * (P(키트양성∩실제음성)/P(실제음성))\n# a / ( a + b )\na = 0.01 * (covid.loc[0, '실제 양성'] / covid.loc[:, '실제 양성'].sum())\nb = 0.99 * (covid.loc[0, '실제 음성'] / covid.loc[:, '실제 음성'].sum())\nprob = a / (a + b)\nprint(f\"따라서 키트의 결과값이 양성으로 나온 사람이 실제로 코로나 바이러스에 걸려있을 확률은 {prob*100:.3f}%\")\n\n따라서 키트의 결과값이 양성으로 나온 사람이 실제로 코로나 바이러스에 걸려있을 확률은 40.459%"
+  },
+  {
+    "objectID": "posts/hw7/chi.html#카이제곱분포와-표본분산",
+    "href": "posts/hw7/chi.html#카이제곱분포와-표본분산",
+    "title": "Homework7",
+    "section": "",
+    "text": "\\[\n자유도가 𝑘인 카이제곱분포를 따르는 확률변수 𝑋 를 X \\sim \\chi^2(k)과 같이 나타내고,\n이 확률변수의 확률밀도함수는 다음과 같습니다.\n\\] \\[\nf_X(x; k) = \\frac{1}{2^{k/2} \\Gamma(k/2)} x^{k/2-1} e^{-x/2}\n\\]\n\n\n\nfrom scipy.stats import chi2\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nk = np.linspace(0, 40, 500)\ny = chi2.pdf(k, df=4)\nplt.plot(k, y)\n\n\n\n\n\n\n\n\n\n\n\n\nchi2.cdf(5, df=4) - chi2.cdf(3, df=4)\n\nnp.float64(0.27052790518742903)\n\n\n\n\n\n\nnp.random.seed(20240902)\nk=chi2.rvs(df=4, size=1000)\nplt.hist(k)\n\n(array([237., 295., 227., 111.,  58.,  35.,  19.,   9.,   7.,   2.]),\n array([ 0.06952138,  1.84067646,  3.61183154,  5.38298663,  7.15414171,\n         8.92529679, 10.69645188, 12.46760696, 14.23876204, 16.00991713,\n        17.78107221]),\n &lt;BarContainer object of 10 artists&gt;)\n\n\n\n\n\n\n\n\n\n\n\n\n\nchi2.ppf(0.95, df=4)\n\nnp.float64(9.487729036781154)\n\n\n\n\n\n\nnp.percentile(k, 95)\n\nnp.float64(9.853854661290491)\n\n\n\n\n\n• 같은 방법으로 500개의 \\[s^2\\] 들, \\[s_{1}^2\\], \\[s_{2}^2\\], …, \\[s_{500}^2\\] 발생시킵니다. • 발생한 500개의 \\[s^2\\] 들 각각에 4.75를 곱하고, 그것들의 히스토그램을 그려보세요. (히스토그램을 그릴 때 probability = TRUE 옵션을 사용해서 그릴 것) • 위에서 그린 히스토그램에 자유도가 19인 카이제곱분포 확률밀도함수를 겹쳐그려보세요.\n\nnp.random.seed(20240902)\nvar_samples = []\n\nfor i in range(500):\n    x = norm.rvs(loc=3, scale=2, size=20)\n    var_samples.append(np.var(x, ddof=1))\n\nvar_samples = np.array(var_samples) * 4.75\nplt.hist(var_samples, density=True)\n\nnp.random.seed(20240902)\nk = np.linspace(0, var_samples.max(), 500)\ny = chi2.pdf(k, df=19)\nplt.plot(k, y, color=\"red\")"
+  },
+  {
+    "objectID": "about.html#objective",
+    "href": "about.html#objective",
+    "title": "Hangyeol Park",
+    "section": "",
+    "text": "I am an experienced engineer with extensive experience in energy solutions, possessing a nuanced understanding of the complexities within the electrical industry gained through learning various automation products in addition to energy solutions."
+  },
+  {
+    "objectID": "about.html#core-competencies",
+    "href": "about.html#core-competencies",
+    "title": "Hangyeol Park",
+    "section": "",
+    "text": "Data analysis and visualization\nMS-SQL\nPython\nPLC (Schnieder)\nSCADA (X-SCADA)\nHMI (Proface)\nPower equipment\nPowerBI, Reportbuilder\nModbus\nWiring"
+  },
+  {
+    "objectID": "about.html#professional-experience",
+    "href": "about.html#professional-experience",
+    "title": "Hangyeol Park",
+    "section": "",
+    "text": "Engineer\n- Built a Data Monitoring System Using PME (Power Monitoring Expert)\n- Provided installation support and manual writing for power metering devices\n- Delivered basic electrical education for users\n- Configured UI using SCADA and data management programs (RDBMS) for data preprocessing and visualization\n- Generated reports as per customer requirements using Python\n- Expanded sub-devices and parent devices using Modbus RTU/TCP\n- Supported wiring operations for panel production including wiring for product and communication lines"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Hangyeol Park",
+    "section": "",
+    "text": "Pukyong National University, Busan, Korea\nBachelor of Science in Electrical Engineering (Mar. 2016 – Feb. 2020)\nCoursework: Electromagnetics, Circuit Theory, Control Engineering, etc."
+  },
+  {
+    "objectID": "about.html#skills-languages",
+    "href": "about.html#skills-languages",
+    "title": "Hangyeol Park",
+    "section": "",
+    "text": "English: Conversational\n\nTOEIC: Scored 790 (Dec. 2021)\n\nTOEIC Speaking: Scored Intermediate Mid 3 (130, Feb. 2022)"
+  },
+  {
+    "objectID": "about.html#licenses-certifications",
+    "href": "about.html#licenses-certifications",
+    "title": "Hangyeol Park",
+    "section": "",
+    "text": "Engineer Electricity\n\nEngineer Electric Work\n\nSQL Developer (SQLD)\n\nAdvanced Data Analytics Semi-Professional (ADsP)\n\nComputer Specialist in Spreadsheet & Database (Level 1)\n\nClass 2 Driver’s License"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "자기소개서",
+    "section": "",
+    "text": "박 한결\n\n\n\nPark HanGyeol\n\n\n\n970813\n\n\n\n010-2658-6918\n\n\n\nhg.park.970813@gmail.com\n\n\n\n서울 신당동 468"
+  },
+  {
+    "objectID": "resume.html#이름",
+    "href": "resume.html#이름",
+    "title": "자기소개서",
+    "section": "",
+    "text": "박 한결"
+  },
+  {
+    "objectID": "resume.html#영문",
+    "href": "resume.html#영문",
+    "title": "자기소개서",
+    "section": "",
+    "text": "Park HanGyeol"
+  },
+  {
+    "objectID": "resume.html#생년월일",
+    "href": "resume.html#생년월일",
+    "title": "자기소개서",
+    "section": "",
+    "text": "970813"
+  },
+  {
+    "objectID": "resume.html#지원분야",
+    "href": "resume.html#지원분야",
+    "title": "자기소개서",
+    "section": "",
+    "text": "PLC & HMI Engineer"
+  },
+  {
+    "objectID": "resume.html#휴대폰",
+    "href": "resume.html#휴대폰",
+    "title": "자기소개서",
+    "section": "",
+    "text": "010-2658-6918"
+  },
+  {
+    "objectID": "resume.html#e-mail",
+    "href": "resume.html#e-mail",
+    "title": "자기소개서",
+    "section": "",
+    "text": "hg.park.970813@gmail.com"
+  },
+  {
+    "objectID": "resume.html#주소",
+    "href": "resume.html#주소",
+    "title": "자기소개서",
+    "section": "",
+    "text": "서울 신당동 468"
+  },
+  {
+    "objectID": "resume.html#회사명",
+    "href": "resume.html#회사명",
+    "title": "자기소개서",
+    "section": "회사명",
+    "text": "회사명\n㈜다스코리아"
+  },
+  {
+    "objectID": "resume.html#부서",
+    "href": "resume.html#부서",
+    "title": "자기소개서",
+    "section": "부서",
+    "text": "부서\n연구소"
+  },
+  {
+    "objectID": "resume.html#직급",
+    "href": "resume.html#직급",
+    "title": "자기소개서",
+    "section": "직급",
+    "text": "직급\n매니저\n\n프로젝트명\nNOBLAND 송파 본사 건물 전력 및 화재감지 모니터링 시스템\n\n프로젝트 기간: 2022.10 ~ 2023.01\n주요 역할 및 담당:\n\n전력 모니터링 시스템(PME) 화면 작화 및 대시보드 트렌드 알람 구성\n데이터 분석 역량 (SQL 및 리포트 생성) 인정받아 데이터베이스 관리 및 전력 소비량 계산 리포트 제공\n화재 감지 모니터링 데모 아키텍처 구성 및 X-SCADA 사용한 데모 시스템 구성\n분전반 내 디바이스 시운전 및 초기값 세팅 및 설치\n\n\n업무 성과: - 전력 모니터링 시스템 구상 및 PME 화면 작화 - MS-ReportBuilder 및 PowerBI 사용한 리포트 생성"
+  },
+  {
+    "objectID": "resume.html#프로젝트명-1",
+    "href": "resume.html#프로젝트명-1",
+    "title": "자기소개서",
+    "section": "프로젝트명",
+    "text": "프로젝트명\n태림산업 창원 공장 전력 모니터링 시스템\n\n프로젝트 기간: 2022. 05 ~ 2022. 08\n주요 역할 및 담당:\n\n전력 모니터링 시스템(PME) 화면 작화 및 대시보드 트렌드 알람 구성"
+  },
+  {
+    "objectID": "resume.html#개인정보",
+    "href": "resume.html#개인정보",
+    "title": "자기소개서",
+    "section": "",
+    "text": "항목\n내용\n\n\n\n\n이름\n박 한결\n\n\n영문\nPark HanGyeol\n\n\n생년월일\n970813\n\n\n휴대폰\n010-2658-6918\n\n\nE-mail\nhg.park.970813@gmail.com\n\n\n주소\n서울 신당동 468"
+  },
+  {
+    "objectID": "resume.html#프로젝트명",
+    "href": "resume.html#프로젝트명",
+    "title": "자기소개서",
+    "section": "프로젝트명",
+    "text": "프로젝트명\nNOBLAND 송파 본사 건물 전력 및 화재감지 모니터링 시스템\n\n프로젝트 기간: 2022.10 ~ 2023.01\n주요 역할 및 담당:\n\n전력 모니터링 시스템(PME) 화면 작화 및 대시보드 트렌드 알람 구성\n데이터 분석 역량 (SQL 및 리포트 생성) 인정받아 데이터베이스 관리 및 전력 소비량 계산 리포트 제공\n화재 감지 모니터링 데모 아키텍처 구성 및 X-SCADA 사용한 데모 시스템 구성\n분전반 내 디바이스 시운전 및 초기값 세팅 및 설치\n\n\n업무 성과: - 전력 모니터링 시스템 구상 및 PME 화면 작화 - MS-ReportBuilder 및 PowerBI 사용한 리포트 생성"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html",
+    "href": "posts/hw8/logisitc.html",
+    "title": "Homework8",
+    "section": "",
+    "text": "종속변수 :\n- 백혈병 세포 관측 불가 여부 (REMISS), 1이면 관측 안됨을 의미\n독립변수 :\n- 골수의 세포성 (CELL)\n- 골수편의 백혈구 비율 (SMEAR)\n- 골수의 백혈병 세포 침투 비율 (INFIL)\n- 골수 백혈병 세포의 라벨링 인덱스 (LI)\n- 말초혈액의 백혈병 세포 수 (BLAST)\n- 치료 시작 전 최고 체온 (TEMP)\n\n\n\n\nimport numpy as np\nimport pandas as pd\nimport statsmodels.api as sm\n\ndf = pd.read_table('C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/leukemia_remission.txt', delimiter='\\t')\ndf\n\nmodel = sm.formula.logit(\"REMISS ~ CELL + SMEAR + INFIL + LI + BLAST + TEMP\", data=df).fit()\nprint(model.summary())\n\nOptimization terminated successfully.\n         Current function value: 0.399886\n         Iterations 10\n                           Logit Regression Results                           \n==============================================================================\nDep. Variable:                 REMISS   No. Observations:                   27\nModel:                          Logit   Df Residuals:                       20\nMethod:                           MLE   Df Model:                            6\nDate:                Tue, 10 Sep 2024   Pseudo R-squ.:                  0.3718\nTime:                        10:52:43   Log-Likelihood:                -10.797\nconverged:                       True   LL-Null:                       -17.186\nCovariance Type:            nonrobust   LLR p-value:                   0.04670\n==============================================================================\n                 coef    std err          z      P&gt;|z|      [0.025      0.975]\n------------------------------------------------------------------------------\nIntercept     64.2581     74.965      0.857      0.391     -82.670     211.187\nCELL          30.8301     52.135      0.591      0.554     -71.353     133.013\nSMEAR         24.6863     61.526      0.401      0.688     -95.903     145.275\nINFIL        -24.9745     65.281     -0.383      0.702    -152.923     102.974\nLI             4.3605      2.658      1.641      0.101      -0.849       9.570\nBLAST         -0.0115      2.266     -0.005      0.996      -4.453       4.430\nTEMP        -100.1734     77.753     -1.288      0.198    -252.567      52.220\n==============================================================================\n\nPossibly complete quasi-separation: A fraction 0.11 of observations can be\nperfectly predicted. This might indicate that there is complete\nquasi-separation. In this case some parameters will not be identified.\n\n\n\n\n\n\n# 검정통계량 stat_value = -2(l(beta_hat)(0) - l(beta_hat))\n# 검정통계량 stat_value = -2((LL-Null) - (Log-Likelihood))\nstat_value = 2 * ((-17.186)-(-10.797))\nstat_value\n\n-12.777999999999999\n\n\n\nLLR p-value: 0.04670\n유의수준 5%일때 p-value이 0.04670으로 유의수준 보다 작기에 이 모델은 유의하다.\n\n\n\n\n\n유의수준 0.2를 기준으로 통계적으로 유의한 변수는 2개, 유의한 변수는 LI(0.101), TEMP(0.198)이다.\n\n\n\n\n\nCELL (골수의 세포성): 65%\nSMEAR (골수편의 백혈구 비율): 45%\nINFIL (골수의 백혈병 세포 침투 비율): 55%\nLI (골수 백혈병 세포의 라벨링 인덱스): 1.2\nBLAST (말초혈액의 백혈병 세포 수): 1.1세포/μL\nTEMP (치료 시작 전 최고 체온): 0.9\n\n\n# odds = exp(64.2581 + 30.8301 * x1 + 24.6863 * x2 + (-24.9745) * x3 + 4.3605 * x4 + (-0.0115) * x5 + (-100.1734) * x6)\nmy_odds=np.exp(64.2581 + 30.8301 * 0.65 + 24.6863 * 0.45 + (-24.9745) * 0.55 + 4.3605 * 1.2 + (-0.0115) * 1.1 + (-100.1734) * 0.9)\nmy_odds\n\nnp.float64(0.03817459641135519)\n\n\n\n\n\n\nmy_odds / (my_odds+1) # 백혈병 세포가 관측되지 않을 확률 : 0.03677\n\nnp.float64(0.03677088280074742)\n\n\n\n\n\n\nTEMP 변수의 계수 : -100.1734\nTemp가 1도 증가할 때 마다 로그 오즈가 100.1734만큼 감소한다.\n\n\nnp.exp(-100.1734) # 0에 가까운 수치\n\nnp.float64(3.1278444454718357e-44)\n\n\n\n온도가 1단위 증가해도 백혈병 비관측에 대한 오즈가 증가하지 않는다.\n\n\n\n\n\nfrom scipy.stats import norm\nimport numpy as np\n\n# 오즈비의 신뢰구간 계산\nz = norm.ppf(0.995)  # 99% 신뢰구간에 해당하는 z값 (정규분포의 99.5 퍼센타일)\ncoef = 30.8301  # 로그 오즈비 계수\nstd_err = 52.135  # 표준 오차\n\nconf_int_low = np.exp(coef - z * std_err)  # 표준 오차를 이용한 계산\nconf_int_high = np.exp(coef + z * std_err)\nprint(conf_int_low, conf_int_high)\n\n1.1683218982002717e-45 5.141881884993857e+71\n\n\n\n\n\n\ndf['predicted'] = model.predict() &gt;= 0.5\nfrom sklearn.metrics import confusion_matrix\nconf_matrix = confusion_matrix(df['REMISS'], df['predicted'])\nprint(conf_matrix)\n\n# 실제 값과 예측 값\n# True Positive (TP): 실제 값이 1이고 예측 값도 1인 경우\n# True Negative (TN): 실제 값이 0이고 예측 값도 0인 경우\n# False Positive (FP): 실제 값이 0인데 예측 값이 1인 경우\n# False Negative (FN): 실제 값이 1인데 예측 값이 0인 경우\n\nactual = df['REMISS']  # 실제 값 (정답)\npredicted = model.predict() &gt;= 0.5  # 예측값 (확률이 50% 이상일 때 1로 처리)\n\n# 혼동 행렬 초기화\nTP = TN = FP = FN = 0\n\n# 혼동 행렬 계산\nfor a, p in zip(actual, predicted):\n    if a == 1 and p == 1:\n        TP += 1\n    elif a == 0 and p == 0:\n        TN += 1\n    elif a == 0 and p == 1:\n        FP += 1\n    elif a == 1 and p == 0:\n        FN += 1\n\n# 결과 출력\nconf_matrix = np.array([[TN, FP], [FN, TP]]).reshape(2,2)\nprint(\"Confusion Matrix:\")\nprint(conf_matrix)\n\n[[15  3]\n [ 4  5]]\nConfusion Matrix:\n[[15  3]\n [ 4  5]]\n\n\n\n\n\n\nfrom sklearn.metrics import confusion_matrix, accuracy_score, f1_score\naccuracy1 = accuracy_score(df['REMISS'], df['predicted'])\naccuracy2 = (conf_matrix[0, 0] + conf_matrix[1, 1]) / conf_matrix.sum()\nprint(accuracy1)\nprint(accuracy2)\n\n0.7407407407407407\n0.7407407407407407\n\n\n\n\n\n\nf1 = f1_score(df['REMISS'], df['predicted'])\nprint(f1)\n\n0.5882352941176471"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#data-exploration",
+    "href": "posts/hw8/logisitc.html#data-exploration",
+    "title": "Homework8",
+    "section": "",
+    "text": "종속변수 :\n- 백혈병 세포 관측 불가 여부 (REMISS), 1이면 관측 안됨을 의미\n독립변수 :\n- 골수의 세포성 (CELL)\n- 골수편의 백혈구 비율 (SMEAR)\n- 골수의 백혈병 세포 침투 비율 (INFIL)\n- 골수 백혈병 세포의 라벨링 인덱스 (LI)\n- 말초혈액의 백혈병 세포 수 (BLAST)\n- 치료 시작 전 최고 체온 (TEMP)"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-1.-데이터를-로드하고-로지스틱-회귀모델을-적합하고-회귀-표를-작성하세요.",
+    "href": "posts/hw8/logisitc.html#문제-1.-데이터를-로드하고-로지스틱-회귀모델을-적합하고-회귀-표를-작성하세요.",
+    "title": "Homework8",
+    "section": "",
+    "text": "import numpy as np\nimport pandas as pd\nimport statsmodels.api as sm\n\ndf = pd.read_table('C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/leukemia_remission.txt', delimiter='\\t')\ndf\n\nmodel = sm.formula.logit(\"REMISS ~ CELL + SMEAR + INFIL + LI + BLAST + TEMP\", data=df).fit()\nprint(model.summary())\n\nOptimization terminated successfully.\n         Current function value: 0.399886\n         Iterations 10\n                           Logit Regression Results                           \n==============================================================================\nDep. Variable:                 REMISS   No. Observations:                   27\nModel:                          Logit   Df Residuals:                       20\nMethod:                           MLE   Df Model:                            6\nDate:                Tue, 10 Sep 2024   Pseudo R-squ.:                  0.3718\nTime:                        10:52:43   Log-Likelihood:                -10.797\nconverged:                       True   LL-Null:                       -17.186\nCovariance Type:            nonrobust   LLR p-value:                   0.04670\n==============================================================================\n                 coef    std err          z      P&gt;|z|      [0.025      0.975]\n------------------------------------------------------------------------------\nIntercept     64.2581     74.965      0.857      0.391     -82.670     211.187\nCELL          30.8301     52.135      0.591      0.554     -71.353     133.013\nSMEAR         24.6863     61.526      0.401      0.688     -95.903     145.275\nINFIL        -24.9745     65.281     -0.383      0.702    -152.923     102.974\nLI             4.3605      2.658      1.641      0.101      -0.849       9.570\nBLAST         -0.0115      2.266     -0.005      0.996      -4.453       4.430\nTEMP        -100.1734     77.753     -1.288      0.198    -252.567      52.220\n==============================================================================\n\nPossibly complete quasi-separation: A fraction 0.11 of observations can be\nperfectly predicted. This might indicate that there is complete\nquasi-separation. In this case some parameters will not be identified."
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-2.-해당-모델은-통계적으로-유의한가요-그-이유를-검정통계량를-사용해서-설명하시오.",
+    "href": "posts/hw8/logisitc.html#문제-2.-해당-모델은-통계적으로-유의한가요-그-이유를-검정통계량를-사용해서-설명하시오.",
+    "title": "Homework8",
+    "section": "",
+    "text": "# 검정통계량 stat_value = -2(l(beta_hat)(0) - l(beta_hat))\n# 검정통계량 stat_value = -2((LL-Null) - (Log-Likelihood))\nstat_value = 2 * ((-17.186)-(-10.797))\nstat_value\n\n-12.777999999999999\n\n\n\nLLR p-value: 0.04670\n유의수준 5%일때 p-value이 0.04670으로 유의수준 보다 작기에 이 모델은 유의하다."
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-3.-유의수준이-0.2를-기준으로-통계적으로-유의한-변수는-몇개이며-어느-변수-인가요",
+    "href": "posts/hw8/logisitc.html#문제-3.-유의수준이-0.2를-기준으로-통계적으로-유의한-변수는-몇개이며-어느-변수-인가요",
+    "title": "Homework8",
+    "section": "",
+    "text": "유의수준 0.2를 기준으로 통계적으로 유의한 변수는 2개, 유의한 변수는 LI(0.101), TEMP(0.198)이다."
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-4.-다음-환자에-대한-오즈는-얼마인가요",
+    "href": "posts/hw8/logisitc.html#문제-4.-다음-환자에-대한-오즈는-얼마인가요",
+    "title": "Homework8",
+    "section": "",
+    "text": "CELL (골수의 세포성): 65%\nSMEAR (골수편의 백혈구 비율): 45%\nINFIL (골수의 백혈병 세포 침투 비율): 55%\nLI (골수 백혈병 세포의 라벨링 인덱스): 1.2\nBLAST (말초혈액의 백혈병 세포 수): 1.1세포/μL\nTEMP (치료 시작 전 최고 체온): 0.9\n\n\n# odds = exp(64.2581 + 30.8301 * x1 + 24.6863 * x2 + (-24.9745) * x3 + 4.3605 * x4 + (-0.0115) * x5 + (-100.1734) * x6)\nmy_odds=np.exp(64.2581 + 30.8301 * 0.65 + 24.6863 * 0.45 + (-24.9745) * 0.55 + 4.3605 * 1.2 + (-0.0115) * 1.1 + (-100.1734) * 0.9)\nmy_odds\n\nnp.float64(0.03817459641135519)"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-5.-위-환자의-혈액에서-백혈병-세포가-관측되지-않은-확률은-얼마인가요",
+    "href": "posts/hw8/logisitc.html#문제-5.-위-환자의-혈액에서-백혈병-세포가-관측되지-않은-확률은-얼마인가요",
+    "title": "Homework8",
+    "section": "",
+    "text": "my_odds / (my_odds+1) # 백혈병 세포가 관측되지 않을 확률 : 0.03677\n\nnp.float64(0.03677088280074742)"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-6.-temp-변수의-계수는-얼마이며-해당-계수를-사용해서-temp-변수가-백혈병-치료에-대한-영향을-설명하시오.",
+    "href": "posts/hw8/logisitc.html#문제-6.-temp-변수의-계수는-얼마이며-해당-계수를-사용해서-temp-변수가-백혈병-치료에-대한-영향을-설명하시오.",
+    "title": "Homework8",
+    "section": "",
+    "text": "TEMP 변수의 계수 : -100.1734\nTemp가 1도 증가할 때 마다 로그 오즈가 100.1734만큼 감소한다.\n\n\nnp.exp(-100.1734) # 0에 가까운 수치\n\nnp.float64(3.1278444454718357e-44)\n\n\n\n온도가 1단위 증가해도 백혈병 비관측에 대한 오즈가 증가하지 않는다."
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-7.-cell-변수의-99-오즈비에-대한-신뢰구간을-구하시오.",
+    "href": "posts/hw8/logisitc.html#문제-7.-cell-변수의-99-오즈비에-대한-신뢰구간을-구하시오.",
+    "title": "Homework8",
+    "section": "",
+    "text": "from scipy.stats import norm\nimport numpy as np\n\n# 오즈비의 신뢰구간 계산\nz = norm.ppf(0.995)  # 99% 신뢰구간에 해당하는 z값 (정규분포의 99.5 퍼센타일)\ncoef = 30.8301  # 로그 오즈비 계수\nstd_err = 52.135  # 표준 오차\n\nconf_int_low = np.exp(coef - z * std_err)  # 표준 오차를 이용한 계산\nconf_int_high = np.exp(coef + z * std_err)\nprint(conf_int_low, conf_int_high)\n\n1.1683218982002717e-45 5.141881884993857e+71"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-8.-주어진-데이터에-대하여-로지스틱-회귀-모델의-예측-확률을-구한-후-50-이상인-경우-1로-처리하여-혼동-행렬를-구하시오.",
+    "href": "posts/hw8/logisitc.html#문제-8.-주어진-데이터에-대하여-로지스틱-회귀-모델의-예측-확률을-구한-후-50-이상인-경우-1로-처리하여-혼동-행렬를-구하시오.",
+    "title": "Homework8",
+    "section": "",
+    "text": "df['predicted'] = model.predict() &gt;= 0.5\nfrom sklearn.metrics import confusion_matrix\nconf_matrix = confusion_matrix(df['REMISS'], df['predicted'])\nprint(conf_matrix)\n\n# 실제 값과 예측 값\n# True Positive (TP): 실제 값이 1이고 예측 값도 1인 경우\n# True Negative (TN): 실제 값이 0이고 예측 값도 0인 경우\n# False Positive (FP): 실제 값이 0인데 예측 값이 1인 경우\n# False Negative (FN): 실제 값이 1인데 예측 값이 0인 경우\n\nactual = df['REMISS']  # 실제 값 (정답)\npredicted = model.predict() &gt;= 0.5  # 예측값 (확률이 50% 이상일 때 1로 처리)\n\n# 혼동 행렬 초기화\nTP = TN = FP = FN = 0\n\n# 혼동 행렬 계산\nfor a, p in zip(actual, predicted):\n    if a == 1 and p == 1:\n        TP += 1\n    elif a == 0 and p == 0:\n        TN += 1\n    elif a == 0 and p == 1:\n        FP += 1\n    elif a == 1 and p == 0:\n        FN += 1\n\n# 결과 출력\nconf_matrix = np.array([[TN, FP], [FN, TP]]).reshape(2,2)\nprint(\"Confusion Matrix:\")\nprint(conf_matrix)\n\n[[15  3]\n [ 4  5]]\nConfusion Matrix:\n[[15  3]\n [ 4  5]]"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-9.-해당-모델의-accuracy는-얼마인가요",
+    "href": "posts/hw8/logisitc.html#문제-9.-해당-모델의-accuracy는-얼마인가요",
+    "title": "Homework8",
+    "section": "",
+    "text": "from sklearn.metrics import confusion_matrix, accuracy_score, f1_score\naccuracy1 = accuracy_score(df['REMISS'], df['predicted'])\naccuracy2 = (conf_matrix[0, 0] + conf_matrix[1, 1]) / conf_matrix.sum()\nprint(accuracy1)\nprint(accuracy2)\n\n0.7407407407407407\n0.7407407407407407"
+  },
+  {
+    "objectID": "posts/hw8/logisitc.html#문제-10.-해당-모델의-f1-score를-구하세요.",
+    "href": "posts/hw8/logisitc.html#문제-10.-해당-모델의-f1-score를-구하세요.",
+    "title": "Homework8",
+    "section": "",
+    "text": "f1 = f1_score(df['REMISS'], df['predicted'])\nprint(f1)\n\n0.5882352941176471"
+  }
+]

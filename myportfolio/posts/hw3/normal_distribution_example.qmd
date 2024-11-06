@@ -1,0 +1,69 @@
+---
+title: "Homework3"
+author: "hg.park"
+date: "2024-07-25"
+categories: [Homework]
+jupyter: python3
+---
+
+## 1. 정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고, 정규분포 mu = 3, sigma = 2 의 pdf를 그릴 것. 
+
+(from scipy.stat import norm 사용금지)
+
+### ***정규분포의 확률 밀도 함수(Probability Density Function)***
+
+$$
+f(x ; \mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left(\frac{x - \mu}{\sigma}\right)^2}
+$$ \*\*\* $\mu$는 평균, $\sigma$는 표준편차 \*\*\*
+
+```{python}
+import math
+def P(x, mu, sigma):
+    return (1 / (sigma * math.sqrt(2*math.pi))) * math.pow(math.e, (-1/2) * ((x - mu)/sigma) ** 2)
+
+# 99.7% 신뢰구간 mu - 3 sigma, mu + 3 sigma
+import matplotlib.pyplot as plt
+import numpy as np
+
+mu = 3
+sigma = 2
+
+x = np.linspace(mu - 3*sigma, mu + 3*sigma, 10000)
+
+plt.plot(x, [P(x, mu, sigma) for x in x])
+plt.show()
+plt.clf()
+```
+
+## 2. 파이썬 scipy 패키지 사용해서 다음과 같은 확률을 구하시오.
+
+### ***X \~ N(2, 3\^2)***
+
+### 1) P(X \< 3)
+
+```{python}
+from scipy.stats import norm
+norm.cdf(3, loc=2, scale=3)
+```
+
+### 2) P(2 \< X \< 5)
+
+```{python}
+from scipy.stats import norm
+norm.cdf(5, loc=2, scale=3) - norm.cdf(2, loc=2, scale=3)
+```
+
+### 3) P(X \< 3 or X \> 7)
+
+```{python}
+from scipy.stats import norm
+norm.cdf(3, loc=2, scale=3) + (1 - norm.cdf(7, loc=2, scale=3))
+```
+
+### 3. LS 빅데이터 스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?
+
+### ***X \~ N(30, 2\^2)***
+```{python}
+from scipy.stats import norm
+norm.ppf(0.95, loc=30, scale=2)
+```

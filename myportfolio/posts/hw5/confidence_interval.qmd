@@ -1,0 +1,92 @@
+---
+title: "Homework5"
+author: "hg.park"
+date: "2024-07-31"
+categories: [Homework]
+jupyter: python3
+---
+
+# 챕터 9-2 설문조사 그래프에서 각 성별 95% 신뢰구간 계산후 그리기 
+
+### norm.ppf() 사용해서 그릴 것, 모분산은 표본 분산을 사용해서 추정, 위 아래 수직 막대기로 표시
+```{python}
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+raw_welfare = pd.read_spss("C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/koweps/Koweps_hpwc14_2019_beta2.sav")
+
+welfare = raw_welfare.copy()
+welfare.shape
+
+welfare = welfare.rename(
+    columns = {
+        "h14_g3" : "sex", 
+        "h14_g4" : "birth",
+        "h14_g10" : "marriage_type",
+        "h14_g11" : "religion",
+        "p1402_8aq1" : "income",
+        "h14_eco9" : "code_job",
+        "h14_reg7" : "code_region"
+    }
+)
+
+welfare = welfare[["sex", "birth", "marriage_type",
+                    "religion","income","code_job","code_region"]]
+                    
+welfare['sex'].value_counts()
+
+welfare['sex'] = np.where(welfare['sex'] == 1, 'male', 'female')
+welfare
+```
+
+```{python}
+sex_income = welfare.dropna(subset="income")\
+       .groupby("sex", as_index=False)\
+       .agg(mean_income = ("income","mean"),
+            var_income = ('income', 'var'),
+            n_income = ('income', 'count'))
+
+sex_income
+```
+
+```{python}
+sns.barplot(data=sex_income, x="sex", y="mean_income", hue="sex")
+plt.show()
+plt.clf()
+```
+
+```{python}
+# mu
+mu_female = sex_income.iloc[0,1]
+mu_male   = sex_income.iloc[1,1]
+
+# var
+female_var = sex_income.iloc[0,2]
+male_var   = sex_income.iloc[1,2]
+
+# n
+female_n = sex_income.iloc[0,3]
+male_n   = sex_income.iloc[1,3]
+
+# norm.ppf를 이용하여 여성의 income 95% 신뢰구간 위치 구해보자
+from scipy.stats import norm
+left_ci_female = norm.ppf(0.025, loc = mu_female, scale = np.sqrt(female_var/female_n))
+# np.float64(180.83045468346842)
+right_ci_female = norm.ppf(0.975, loc = mu_female, scale = np.sqrt(female_var/female_n))
+# np.float64(191.75573685327993)
+
+# norm.ppf를 이용하여 남성의 income 95% 신뢰구간 위치 구해보자
+left_ci_male = norm.ppf(0.025, loc = mu_male, scale = np.sqrt(male_var/male_n))
+# np.float64(340.11259229974775)
+right_ci_male = norm.ppf(0.975, loc = mu_male, scale = np.sqrt(male_var/male_n))
+# np.float64(357.96254968365116)
+
+sns.barplot(data = sex_income, x = 'sex', y = 'mean_income', hue = 'sex')
+plt.vlines(x=0, ymin=left_ci_female, ymax=right_ci_female, color='black', linewidth=10)
+plt.vlines(x=1, ymin=left_ci_male, ymax=right_ci_male, color='black', linewidth=10)
+plt.show()
+plt.clf()
+
+```

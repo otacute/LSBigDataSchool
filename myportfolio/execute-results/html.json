@@ -1,0 +1,12 @@
+{
+  "hash": "97aadac291627374023470d38fe189aa",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"HomeWork(20240715)\"\njupyter: python3\n---\n\n\n\n\n### 1. p84 혼자서 해보기\n\n::: {#2873f0db .cell execution_count=1}\n``` {.python .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-display execution_count=3}\n```\n2\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "hw1_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

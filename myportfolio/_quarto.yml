@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "**Park Han Gyeol : Portfolio**"
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Resume-Kor
+        href: resume.qmd
+      - text: Resume-Eng
+        href: about.qmd
+      - text: Blog
+        href: blog.qmd
+
+        
+format:
+  html:
+    theme: flatly
+    toc: true
+    
+
+
+

@@ -1,0 +1,117 @@
+---
+title: "Homework4"
+author: "hg.park"
+date: "2024-07-29"
+categories: [Homework]
+jupyter: python3
+---
+
+# 표본분산 n-1 vs. n 
+
+## 표본 분산 계산 시 왜 n-1로 나누는지 알아보도록 하겠습니다. 균일분포 (3,7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.
+
+### n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요! (10000개 사용)
+
+```{python}
+# 균일 분포 uniform 라이브러리 호출
+from scipy.stats import uniform
+
+# X ~ U(a,b)
+# loc = a, scale = b - a
+# 균일분포 (3,7)에서 20개의 표본을 10000번 뽑음
+x = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)
+x
+
+# 1. 분산 s_2 : n - 1로 나눈 분산
+import numpy as np
+s_2 = x.var(axis=1, ddof=1)
+s_2
+
+import matplotlib.pyplot as plt
+plt.hist(s_2, color = 'blue', alpha=0.4, label = 'n-1')
+plt.legend()
+plt.show()
+plt.clf()
+```
+
+```{python}
+# 균일 분포 uniform 라이브러리 호출
+from scipy.stats import uniform
+
+# X ~ U(a,b)
+# loc = a, scale = b - a
+# 균일분포 (3,7)에서 20개의 표본을 10000번 뽑음
+x = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)
+x
+
+# 2. 분산 k_2 : n으로 나눈 분산
+# np.var() 사용
+k_2 = x.var(axis=1, ddof=0)
+k_2
+
+import matplotlib.pyplot as plt
+plt.hist(k_2, color = 'red', alpha=0.4, label = 'n')
+plt.legend()
+plt.show()
+plt.clf()
+```
+
+### 2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.
+
+```{python}
+# 균일 분포 uniform 라이브러리 호출
+from scipy.stats import uniform
+
+# X ~ U(a,b)
+# loc = a, scale = b - a
+# 균일분포 (3,7)에서 20개의 표본을 10000번 뽑음
+x = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)
+x
+
+# 1. 분산 s_2 : n - 1로 나눈 분산
+import numpy as np
+s_2 = x.var(axis=1, ddof=1)
+s_2
+
+# 모분산
+v = np.var(x)
+
+import matplotlib.pyplot as plt
+plt.hist(s_2, color = 'blue', alpha=0.4, label = 'n-1')
+plt.axvline(x=v, color='green', linestyle='-', linewidth=2)
+plt.legend()
+plt.show()
+plt.clf()
+```
+
+```{python}
+# 균일 분포 uniform 라이브러리 호출
+from scipy.stats import uniform
+
+# X ~ U(a,b)
+# loc = a, scale = b - a
+# 균일분포 (3,7)에서 20개의 표본을 10000번 뽑음
+x = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)
+x
+
+# 2. 분산 k_2 : n으로 나눈 분산
+# np.var() 사용
+k_2 = x.var(axis=1, ddof=0)
+k_2
+
+# 모분산
+v = np.var(x)
+
+import matplotlib.pyplot as plt
+plt.hist(k_2, color = 'red', alpha=0.4, label = 'n')
+plt.axvline(x=v, color='green', linestyle='-', linewidth=2)
+plt.legend()
+plt.show()
+plt.clf()
+```
+
+### 3. 결과를 살펴보고, 왜 n-1로 나눈 것을 분산을 추정하는 지표로 사용하는 것이 타당한지 써주세요!
+
+n-1로 나눈 분산인 s_2의 분포는 모분산과 더 가깝고, 분포의 중앙에 모분산이 위치함. 반면 k_2의 분포는 모분산보다 왼쪽(더 작게)치우쳐 있음
+
+n으로 나눈 분산인 k_2는 표본 분산의 평균이 모분산보다 작아짐. 이를 보정하기 위해 n-1로 나누어줌, n-1로 나눈 분산 s_2은 모분산의 불평 추정량.

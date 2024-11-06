@@ -1,0 +1,182 @@
+---
+title: "Homework7"
+author: "hg.park"
+date: "2024-09-02"
+categories: [Homework]
+jupyter: python3
+---
+
+# ADP 교재 37-38p 연습문제
+
+## ADP 표본점수
+
+2022년에 실시 된 ADP 실기 시험의 통계파트 표준점수는 평균이 30, 표준편차가 5인 정규분포를 따른다고 한다.
+
+### 1. ADP 실기 시험의 통계파트 표준점수의 밀도함수를 그려보세요.
+
+```{python}
+# X ~ N(30, 5^2)
+from scipy.stats import norm
+import numpy as np
+
+x = np.linspace(10, 50, 500)
+pdf_values = norm.pdf(x, loc=30, scale=5)
+
+import matplotlib.pyplot as plt
+
+plt.plot(x, pdf_values)
+```
+
+### 2. ADP 수험생을 임의로 1명을 선택하여 통계 점수를 조회했을때 45점 보다 높은 점수를 받았을 확률을 구하세요.
+
+```{python}
+# P(X>45) = ?
+1 - norm.cdf(45, loc=30, scale=5)
+```
+
+### 3. 슬통이는 상위 10%에 해당하는 점수를 얻었다고 한다면, 슬통이의 점수는 얼마인지 계산해보세요.
+
+```{python}
+norm.ppf(0.9, loc=30, scale=5)
+```
+
+### 4. 슬기로운 통계생활의 해당 회차 수강생은 16명이었다고 한다. 16명의 통계 파트 점수를 평균내었을 때, 이 평균값이 따르는 분포의 확률밀도 함수를 1번의 그래프와 겹쳐 그려보세요.
+
+```{python}
+# X_bar 표본, n = 16
+# X_bar ~ N(30, 5^2 / 16)
+x = np.linspace(10, 50, 500)
+x_bar_pdf_values = norm.pdf(x, loc=30, scale=np.sqrt((5**2)/16))
+pdf_values = norm.pdf(x, loc=30, scale=5)
+plt.plot(x, pdf_values)
+plt.plot(x, x_bar_pdf_values, color="red")
+```
+
+### 5. 슬기로운 통계생활 ADP 반 수강생들의 통계점수를 평균내었다고 할 때, 이 값이 38점보다 높게 나올 확률을 구하세요
+
+```{python}
+# X_bar 표본, n = 16
+# X_bar ~ N(30, 5^2 / 16)
+# P(X_bar>38) = ? 
+1 - norm.cdf(38, loc=30, scale=np.sqrt((5**2)/16))
+```
+
+## Covid 19 발병률
+
+Covid‑19의 발병률은 1%라고 한다. 다음은 이번 코로나 사태로 인하여 코로나 의심 환자들 1,085 명을 대상으로 슬통 회사의 “다잡아” 키트를 사용하여 양성 반응을 체크한 결과이다. ![covid 양성 반응 결과](covid19.jpg)
+
+### 1. 다잡아 키트가 코로나 바이러스에 걸린 사람을 양성으로 잡아낼 확률을 계산하세요.
+
+```{python}
+# P(키트 양성|실제 양성)
+# P(키트 양성 ∩ 실제 양성) / P(실제 양성)
+import pandas as pd
+covid = pd.DataFrame({
+    "구분": ["키트 양성", "키트 음성"],
+    "실제 양성": [370, 15],
+    "실제 음성": [10, 690]
+})
+covid
+```
+
+```{python}
+# P(키트 양성|실제 양성)
+# P(키트 양성 ∩ 실제 양성) / P(실제 양성)
+covid.loc[0, '실제 양성'] / covid.loc[:, '실제 양성'].sum()
+```
+
+### 2. 슬통 회사에서 다잡아 키트를 사용해 양성으로 나온 사람이 실제로는 코로나 바이러스에 걸려있을 확률을 97%라며, 키트의 우수성을 주장했다. 이 주장이 옳지 않은 이유를 서술하세요.
+
+```{python}
+# P(실제 양성|키트 양성)
+# P(실제 양성 ∩ 키트 양성) / P(키트 양성)
+covid.loc[0, '실제 양성'] / covid[covid['구분']=='키트 양성'][['실제 양성','실제 음성']].sum(axis='columns')
+```
+
+→ 표본 집단의 유병률과 모집단의 유병률 차이가 있기 때문.
+
+### 3. Covid‑19 발병률을 사용하여, 키트의 결과값이 양성으로 나온 사람이 실제로 코로나 바이러스에 걸려있을 확률을 구하세요.
+
+```{python}
+# 코로나 발병률 = 0.01
+# P(실제 양성) = 0.01 이란 의미
+# P(실제 양성|키트 양성) = P(실제 양성 ∩ 키트 양성) / P(키트 양성) =  P(실제양성)P(키트양성|실제양성) / {P(실제양성)P(키트양성|실제양성) + P(실제음성)P(키트양성|실제음성)}
+# a = P(실제양성)P(키트양성|실제양성)
+# b = P(실제음성)P(키트양성|실제음성) = P(실제음성) * (P(키트양성∩실제음성)/P(실제음성))
+# a / ( a + b )
+a = 0.01 * (covid.loc[0, '실제 양성'] / covid.loc[:, '실제 양성'].sum())
+b = 0.99 * (covid.loc[0, '실제 음성'] / covid.loc[:, '실제 음성'].sum())
+prob = a / (a + b)
+print(f"따라서 키트의 결과값이 양성으로 나온 사람이 실제로 코로나 바이러스에 걸려있을 확률은 {prob*100:.3f}%")
+```
+
+## 카이제곱분포와 표본분산
+
+$$
+자유도가 𝑘인 카이제곱분포를 따르는 확률변수 𝑋 를 X \sim \chi^2(k)과 같이 나타내고, 
+이 확률변수의 확률밀도함수는 다음과 같습니다.
+$$ $$
+f_X(x; k) = \frac{1}{2^{k/2} \Gamma(k/2)} x^{k/2-1} e^{-x/2}
+$$
+
+### 1. 자유도가 4인 카이제곱분포의 확률밀도함수를 그려보세요.
+
+```{python}
+from scipy.stats import chi2
+import numpy as np
+import matplotlib.pyplot as plt
+
+k = np.linspace(0, 40, 500)
+y = chi2.pdf(k, df=4)
+plt.plot(k, y)
+```
+
+### 2. 다음의 확률을 구해보세요. 𝑃 (3 ≤ 𝑋 ≤ 5)
+
+```{python}
+chi2.cdf(5, df=4) - chi2.cdf(3, df=4)
+```
+
+### 3. 자유도가 4인 카이제곱분포에서 크기가 1000인 표본을 뽑은 후, 히스토그램을 그려보세요.
+
+```{python}
+np.random.seed(20240902)
+k=chi2.rvs(df=4, size=1000)
+plt.hist(k)
+```
+
+### 4. 자유도가 4인 카이제곱분포를 따르는 확률변수에서 나올 수 있는 값 중 상위 5%에 해당하는값은 얼마인지 계산해보세요.
+
+```{python}
+chi2.ppf(0.95, df=4)
+```
+
+### 5. 3번에서 뽑힌 표본값들 중 상위 5%에 위치한 표본의 값은 얼마인가요?
+
+```{python}
+np.percentile(k, 95)
+```
+
+### 6. 평균이 3, 표준편차가 2인 정규분포를 따르는 확률변수에서 크기가 20인 표본, $$𝑥_{1}$$, ..., $$𝑥_{20}$$,을뽑은 후 표본분산을 계산한 것을 $$s_{1}^2$$이라 생각해보죠. 다음을 수행해보세요!
+
+• 같은 방법으로 500개의 $$s^2$$ 들, $$s_{1}^2$$, $$s_{2}^2$$, ..., $$s_{500}^2$$ 발생시킵니다. 
+• 발생한 500개의 $$s^2$$ 들 각각에 4.75를 곱하고, 그것들의 히스토그램을 그려보세요. (히스토그램을 그릴 때 probability = TRUE 옵션을 사용해서 그릴 것) 
+• 위에서 그린 히스토그램에 자유도가 19인 카이제곱분포 확률밀도함수를 겹쳐그려보세요.
+
+```{python}
+np.random.seed(20240902)
+var_samples = []
+
+for i in range(500):
+    x = norm.rvs(loc=3, scale=2, size=20)
+    var_samples.append(np.var(x, ddof=1))
+
+var_samples = np.array(var_samples) * 4.75
+plt.hist(var_samples, density=True)
+
+np.random.seed(20240902)
+k = np.linspace(0, var_samples.max(), 500)
+y = chi2.pdf(k, df=19)
+plt.plot(k, y, color="red")
+
+```
