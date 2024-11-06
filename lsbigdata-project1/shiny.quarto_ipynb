@@ -1,0 +1,81 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Penguin Bills\"\n",
+        "format: dashboard\n",
+        "server: shiny\n",
+        "---"
+      ],
+      "id": "9ba0eefd"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import seaborn as sns\n",
+        "penguins = sns.load_dataset(\"penguins\")"
+      ],
+      "id": "38aaba26",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## {.sidebar}\n"
+      ],
+      "id": "a99ccfdf"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from shiny.express import render, ui\n",
+        "ui.input_select(\"x\", \"Variable:\",\n",
+        "                choices=[\"bill_length_mm\", \"bill_depth_mm\"])\n",
+        "ui.input_select(\"dist\", \"Distribution:\", choices=[\"hist\", \"kde\"])\n",
+        "ui.input_checkbox(\"rug\", \"Show rug marks\", value = False)"
+      ],
+      "id": "302a4268",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Column\n"
+      ],
+      "id": "482c37e3"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "@render.plot\n",
+        "def displot():\n",
+        "    sns.displot(\n",
+        "        data=penguins, hue=\"species\", multiple=\"stack\",\n",
+        "        x=input.x(), rug=input.rug(), kind=input.dist())"
+      ],
+      "id": "6c7c421e",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\USER\\AppData\\Roaming\\Python\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

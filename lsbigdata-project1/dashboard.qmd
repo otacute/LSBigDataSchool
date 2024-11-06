@@ -1,0 +1,118 @@
+---
+title: "팔머펭귄 대쉬보드"
+author: "Hangyeol Park"
+format: 
+    dashboard:
+        # scrolling: true 
+        logo: palmerpenguins.png
+        nav-buttons:
+          - icon: gitlab
+            href: https://github.com/otacute?tab=repositories
+---
+
+# Page 1
+
+## {.sidebar}
+여기는 사이드 바에 대한 내용이 들어갈 곳입니다.
+
+## 칼럼
+
+### 첫번째{height="60%"}
+
+```{python}
+import pandas as pd
+import numpy as np
+import plotly.express as px
+from palmerpenguins import load_penguins
+
+penguins = load_penguins()
+# penguins.head()
+
+# x: bill_length_mm
+# y: bill_depth_mm  
+fig = px.scatter(
+    penguins,
+    x="bill_length_mm",
+    y="bill_depth_mm",
+    color="species",
+    # trendline="ols" # p134.
+)
+fig.show()
+```
+
+
+### 두번째{height="40%"}
+
+#### 텍스트1 {.tabset}
+
+```{python}
+from itables import show
+show(penguins, buttons = ['copy', 'excel', 'pdf'])
+```
+
+::: {.card title="My Title"}
+This text will be displayed within a card
+![팔머펭귄](palmerpenguins.png)
+:::
+
+# Page 2
+
+```{python}
+articles = 100
+comments = 50
+spam_num = 300
+```
+
+## Row 
+
+```{python}
+#| content: valuebox
+#| title: "Articles per day"
+#| icon: pencil
+#| color: primary
+dict(
+  value = articles
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Comments per day"
+dict(
+  icon = "chat",
+  color = "primary",
+  value = comments
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Spam per day"
+dict(
+  icon = "airplane-engines",
+  color = "danger",
+  value = spam_num
+)
+```
+
+## Row 
+```{python}
+import pandas as pd
+import numpy as np
+import plotly.express as px
+from palmerpenguins import load_penguins
+
+penguins = load_penguins()
+# penguins.head()
+
+# x: bill_length_mm
+# y: bill_depth_mm  
+fig = px.scatter(
+    penguins,
+    x="bill_length_mm",
+    y="bill_depth_mm",
+    color="species",
+    # trendline="ols" # p134.
+)
+fig.show()
+```
