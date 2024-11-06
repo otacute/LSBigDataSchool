@@ -1,0 +1,27 @@
+project:
+  type: website
+
+website:
+  title: "이삭토스트 맛있조"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: 한결.qmd
+        text: 연별 국내 여행 횟수 트랜드
+      - href: 유나.qmd
+        text: 여행 정보 획득 경로
+      - href: 현주.qmd
+        text: 여행 선택 이유 1순위
+      - href: 선아.qmd
+        text: 지역별 관광지 검색 순위
+      - href: 결론.qmd
+        text: 결론
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+
